@@ -1,0 +1,141 @@
+{
+ "id": "water_treatment",
+ "title": "Water treatment: book the free in-home water analysis",
+ "persona": "Homeowner",
+ "persona_emoji": "🚰",
+ "web_intro": "You're the setter for a water-treatment dealer. A <b>homeowner</b> asked about a free water test. You'll hear <b>5 situations</b>. Answer each one <b>out loud, in English</b>, like a real call (20–60 seconds).",
+ "goal_html": "Goal: <b>book the free in-home water analysis</b> with both decision makers present.",
+ "wa_intro": "I'll be a *homeowner* who asked about a free water test. You are the setter for a water-treatment company.\n\nAnswer each message with a *VOICE NOTE* in English, like you're on the phone (30–60 sec). There are *5 rounds*. Be warm, take control and try to *book the free in-home water analysis*.\n\nReady? Here's the call 📞",
+ "rounds": [
+  {
+   "say": "Hello? Yeah... I filled out something about a water test. Who is this?",
+   "goal": "Open: greet + company + reason + permission + confirm they asked for the test",
+   "rubric": [
+    [
+     "greeting/company",
+     "\\b(this is|my name is|calling (from|with)|thank(s)? for)\\b",
+     3
+    ],
+    [
+     "reason",
+     "\\b(water (test|analysis|quality)|you (requested|asked|filled|signed))\\b",
+     5
+    ],
+    [
+     "permission",
+     "\\b(do you have|is (this|now) a (good|bad) time|(a )?(minute|second|moment)|quick)\\b",
+     4
+    ],
+    [
+     "discovery question",
+     "\\b(city water|well|softener|filter|taste|smell|spots|hard water|bottled)\\b",
+     8
+    ]
+   ]
+  },
+  {
+   "say": "Honestly my water is fine. We just buy bottled water for drinking.",
+   "goal": "'My water is fine' objection: curiosity, what's in it, bottled-water cost, book the test",
+   "rubric": [
+    [
+     "acknowledge",
+     "\\b(understand|makes sense|a lot of (people|families)|totally|of course)\\b",
+     3
+    ],
+    [
+     "curiosity/education",
+     "\\b(hard(ness)?|chlorine|minerals?|what'?s (really )?in|can'?t see|test (shows|tells))\\b",
+     6
+    ],
+    [
+     "bottled water cost",
+     "\\b(bottled|cost|spend|month|money|save)\\b",
+     5
+    ],
+    [
+     "books",
+     "\\b(free|schedule|appointment|come (out|by)|today|tomorrow|morning|afternoon|evening)\\b",
+     6
+    ]
+   ]
+  },
+  {
+   "say": "How much does one of those systems cost? I'm not buying anything today.",
+   "goal": "Price objection: the test is free, no obligation, price depends on the results, book",
+   "rubric": [
+    [
+     "acknowledge",
+     "\\b(understand|fair|great question|of course|totally)\\b",
+     3
+    ],
+    [
+     "free/no obligation",
+     "\\b(free|no (cost|charge|obligation|pressure)|nothing to buy)\\b",
+     6
+    ],
+    [
+     "depends on results",
+     "\\b(depends|results|every home|each home|your water|recommend)\\b",
+     5
+    ],
+    [
+     "books",
+     "\\b(schedule|appointment|come (out|by)|available|today|tomorrow|morning|afternoon|evening)\\b",
+     6
+    ]
+   ]
+  },
+  {
+   "say": "I'd have to check with my wife first. She handles all of this.",
+   "goal": "Spouse objection: both decision makers present, offer a time when both are home, lock it in",
+   "rubric": [
+    [
+     "respect",
+     "\\b(of course|absolutely|makes sense|great idea|totally|understand)\\b",
+     4
+    ],
+    [
+     "both decision makers",
+     "\\b(both|together|her|wife|you two|when she'?s (home|there|available))\\b",
+     6
+    ],
+    [
+     "offers time",
+     "\\b(\\d{1,2}(:\\d\\d)?\\s?(am|pm)?|morning|afternoon|evening|tomorrow|today|saturday|weekend|what time)\\b",
+     5
+    ],
+    [
+     "locks it in",
+     "\\b(schedule|book|put you down|reserve|confirm|lock)\\b",
+     5
+    ]
+   ]
+  },
+  {
+   "say": "Look, I'm busy right now. Can you just text me the info?",
+   "goal": "Brush-off: keep control, 30-second value, confirm address + time now, then send the confirmation",
+   "rubric": [
+    [
+     "acknowledge",
+     "\\b(understand|totally|of course|sure|absolutely|respect)\\b",
+     3
+    ],
+    [
+     "value/urgency",
+     "\\b(free|quick(ly)?|only take|minute|seconds|results|same day)\\b",
+     5
+    ],
+    [
+     "confirm now",
+     "\\b(confirm|real quick|before (you go|i let you go)|just need|address|best (time|number))\\b",
+     6
+    ],
+    [
+     "books + sends",
+     "\\b(schedule|appointment|text you|send you|confirmation|reminder)\\b",
+     6
+    ]
+   ]
+  }
+ ]
+}

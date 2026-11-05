@@ -1,0 +1,17 @@
+.env
+*.env
+!.env.example
+state.json*
+events.jsonl
+hire_alert_state.json*
+*.lock
+media/
+logs/
+guard/
+rp_web/
+jobs.json
+.venv/
+.models/
+__pycache__/
+*.pyc
+.DS_Store

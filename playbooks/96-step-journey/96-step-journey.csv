@@ -1,0 +1,97 @@
+step,step_id,phase,phase_trade,chapter,chapter_name,day_offset,channel,subject_or_theme,angle,goal,tag
+1,P1-01,1,Water treatment,1,Health & Family,1,Email,"What's in your water, {First_Name}?",Local water-quality education for {City}. Soft CTA: free report.,Educate,JOURNEY-P1-01
+2,P1-02,1,Water treatment,1,Health & Family,4,SMS,3 things unfiltered water does to your family,"Short list (skin, hair, taste). Link to an education page.",Educate,JOURNEY-P1-02
+3,P1-03,1,Water treatment,1,Health & Family,7,Email,The water your kids drink every day,"Family angle. Emotional, not alarmist. Product visual.",Connect,JOURNEY-P1-03
+4,P1-04,1,Water treatment,1,Health & Family,10,SMS,Dry skin even with lotion?,Hard-water link. Short and punchy. Before/after story link.,Engage,JOURNEY-P1-04
+5,P1-05,1,Water treatment,1,Health & Family,13,Email,What's happening inside your pipes,Scale buildup and appliance wear. Use {Visit_Notes} if relevant.,Educate,JOURNEY-P1-05
+6,P1-06,1,Water treatment,1,Health & Family,16,Email,"Customer story: ""I can't believe what I used to spend""","Real nearby customer, with written permission.",Proof,JOURNEY-P1-06
+7,P1-07,1,Water treatment,1,Health & Family,19,SMS,"Quick question, {First_Name}",Personal check-in from {Rep_Name}. Invite a reply.,Reply,JOURNEY-P1-07
+8,P1-08,1,Water treatment,1,Health & Family,22,Email,Your family deserves clean water,Chapter recap. Bridge to savings. Soft CTA: book a call.,Book,JOURNEY-P1-08
+9,P1-09,1,Water treatment,2,Money & Savings,25,Email,You're still spending {Annual_Cost} a year,Lead with their own number from the visit. Reopen the math.,Re-open,JOURNEY-P1-09
+10,P1-10,1,Water treatment,2,Money & Savings,28,SMS,The math on bottled water,"Monthly bottle spend vs. system. One line, one number.",Engage,JOURNEY-P1-10
+11,P1-11,1,Water treatment,2,Money & Savings,31,Email,The real cost of bottled water (plastic included),Cost per gallon plus the environmental angle.,Educate,JOURNEY-P1-11
+12,P1-12,1,Water treatment,2,Money & Savings,34,Email,Your appliances will thank you,Appliance lifespan and repair savings.,Educate,JOURNEY-P1-12
+13,P1-13,1,Water treatment,2,Money & Savings,37,SMS,What a household like yours saves in a year,Household-size framing from {Visit_Notes}.,Engage,JOURNEY-P1-13
+14,P1-14,1,Water treatment,2,Money & Savings,40,Email,Financing: a payment vs. what you spend now,Only terms you really offer. CTA: schedule a call.,Book,JOURNEY-P1-14
+15,P1-15,1,Water treatment,2,Money & Savings,43,Email,Customer story: first-year savings,"Real numbers, real customer, with permission.",Proof,JOURNEY-P1-15
+16,P1-16,1,Water treatment,2,Money & Savings,46,SMS,What would you do with {Annual_Cost} back?,Imaginative close. CTA: book.,Book,JOURNEY-P1-16
+17,P1-17,1,Water treatment,3,Re-Engagement & Final Push,55,Email,It's been two months. How's the water?,Low-pressure time reference. Reply or book.,Re-engage,JOURNEY-P1-17
+18,P1-18,1,Water treatment,3,Re-Engagement & Final Push,58,SMS,A water update for {City},"Only a real, sourced local notice. Urgency without panic.",Engage,JOURNEY-P1-18
+19,P1-19,1,Water treatment,3,Re-Engagement & Final Push,61,Email,We installed systems near you this week,Local social proof. Send only when it's true.,Proof,JOURNEY-P1-19
+20,P1-20,1,Water treatment,3,Re-Engagement & Final Push,65,SMS,Ever tasted the difference?,Offer a sample or a quick demo. Low friction.,Reply,JOURNEY-P1-20
+21,P1-21,1,Water treatment,3,Re-Engagement & Final Push,70,Email,Video: how the system works in 2 minutes,Demo video email.,Educate,JOURNEY-P1-21
+22,P1-22,1,Water treatment,3,Re-Engagement & Final Push,75,Email,A local offer for {City} homeowners,"Real, time-limited promotion. Signed by {Rep_Name}.",Offer,JOURNEY-P1-22
+23,P1-23,1,Water treatment,3,Re-Engagement & Final Push,80,SMS,"{First_Name}, can I ask one last question?",What is stopping you? Invite a reply.,Reply,JOURNEY-P1-23
+24,P1-24,1,Water treatment,3,Re-Engagement & Final Push,90,Email,Closing this chapter. The door stays open.,"Breakup email + bridge: ""something different that may interest you.""",Pivot,JOURNEY-P1-24
+25,P2-01,2,"Roofing, solar & storm restoration",1,Energy Bills & Solar,91,Email,"How much is your power bill, {First_Name}?",Open with a question. Bridge from Phase 1 to energy.,Pivot,JOURNEY-P2-01
+26,P2-02,2,"Roofing, solar & storm restoration",1,Energy Bills & Solar,94,SMS,Is your roof working for you?,One line. Link to a savings estimate.,Engage,JOURNEY-P2-02
+27,P2-03,2,"Roofing, solar & storm restoration",1,Energy Bills & Solar,97,Email,How a local family cut their power bill,"Case study, numbers-forward, with permission.",Proof,JOURNEY-P2-03
+28,P2-04,2,"Roofing, solar & storm restoration",1,Energy Bills & Solar,100,Email,Rebates & incentives: what's actually available near you,Verify current programs before every send. Never promise a credit.,Educate,JOURNEY-P2-04
+29,P2-05,2,"Roofing, solar & storm restoration",1,Energy Bills & Solar,103,SMS,An aging roof costs you home value,Roof angle. Free inspection offer.,Offer,JOURNEY-P2-05
+30,P2-06,2,"Roofing, solar & storm restoration",1,Energy Bills & Solar,106,Email,One upgrade leads to the next,Bundle with the Phase 1 product (bought or not).,Bundle,JOURNEY-P2-06
+31,P2-07,2,"Roofing, solar & storm restoration",1,Energy Bills & Solar,109,SMS,What's your home worth with upgrades?,Property-value framing.,Engage,JOURNEY-P2-07
+32,P2-08,2,"Roofing, solar & storm restoration",1,Energy Bills & Solar,112,Email,"Customer story: ""Our bill dropped""","Specific number, local customer.",Proof,JOURNEY-P2-08
+33,P2-09,2,"Roofing, solar & storm restoration",2,Roof Protection & Storm Restoration,115,Email,How old is your roof?,"Lifespan, signs of wear, local climate in {City}.",Educate,JOURNEY-P2-09
+34,P2-10,2,"Roofing, solar & storm restoration",2,Roof Protection & Storm Restoration,118,SMS,After the last storm: free roof check,Storm-damage inspection offer. Fire early if a storm hits.,Offer,JOURNEY-P2-10
+35,P2-11,2,"Roofing, solar & storm restoration",2,Roof Protection & Storm Restoration,121,Email,The package your neighbors are choosing,"Roof + energy + Phase 1 product, as one plan.",Bundle,JOURNEY-P2-11
+36,P2-12,2,"Roofing, solar & storm restoration",2,Roof Protection & Storm Restoration,124,Email,Is your roof ready for the next 25 years?,Roof-first logic before any solar install.,Educate,JOURNEY-P2-12
+37,P2-13,2,"Roofing, solar & storm restoration",2,Roof Protection & Storm Restoration,127,SMS,Financing available this month,Real terms only. Limited-time framing only if true.,Offer,JOURNEY-P2-13
+38,P2-14,2,"Roofing, solar & storm restoration",2,Roof Protection & Storm Restoration,130,Email,3 signs your roof needs attention now,Visual checklist. Free inspection CTA.,Book,JOURNEY-P2-14
+39,P2-15,2,"Roofing, solar & storm restoration",2,Roof Protection & Storm Restoration,133,SMS,Storm or water damage? We can help today,"Restoration angle: fast response, help documenting damage.",Reply,JOURNEY-P2-15
+40,P2-16,2,"Roofing, solar & storm restoration",2,Roof Protection & Storm Restoration,136,Email,Our process: inspection to install in 3 steps,"Transparency. ""No surprises."" Timeline visual.",Trust,JOURNEY-P2-16
+41,P2-17,2,"Roofing, solar & storm restoration",3,Final Close & Transition,145,SMS,Has your power bill changed?,Re-engage after a few months. Invite a reply.,Re-engage,JOURNEY-P2-17
+42,P2-18,2,"Roofing, solar & storm restoration",3,Final Close & Transition,150,Email,Video: a real install in {City},Install footage near them.,Proof,JOURNEY-P2-18
+43,P2-19,2,"Roofing, solar & storm restoration",3,Final Close & Transition,155,Email,Free inspection + savings analysis this week,"No-obligation offer, 30 minutes.",Book,JOURNEY-P2-19
+44,P2-20,2,"Roofing, solar & storm restoration",3,Final Close & Transition,158,SMS,Book before the season turns,"Season-based urgency, honest about scheduling.",Book,JOURNEY-P2-20
+45,P2-21,2,"Roofing, solar & storm restoration",3,Final Close & Transition,162,SMS,Can I send you your personalized analysis?,Curiosity close. Ask for a simple OK.,Reply,JOURNEY-P2-21
+46,P2-22,2,"Roofing, solar & storm restoration",3,Final Close & Transition,167,Email,What you could have saved since we talked,Honest estimate. Compound urgency.,Re-open,JOURNEY-P2-22
+47,P2-23,2,"Roofing, solar & storm restoration",3,Final Close & Transition,172,SMS,"{First_Name}, roof & solar: yes or no?","Binary: reply YES and I call today, NO and I leave you alone.",Close,JOURNEY-P2-23
+48,P2-24,2,"Roofing, solar & storm restoration",3,Final Close & Transition,180,Email,"Moving on, but this may interest you",Breakup + bridge to Phase 3.,Pivot,JOURNEY-P2-24
+49,P3-01,3,Windows & doors,1,Comfort & Energy,181,Email,Are your windows letting the heat in?,"Energy-leak education, local climate angle.",Pivot,JOURNEY-P3-01
+50,P3-02,3,Windows & doors,1,Comfort & Energy,184,SMS,High cooling bill? It could be your windows,3 warning signs. Link to a checklist.,Engage,JOURNEY-P3-02
+51,P3-03,3,Windows & doors,1,Comfort & Energy,187,Email,The quiet you deserve,Noise reduction. Quality of life.,Educate,JOURNEY-P3-03
+52,P3-04,3,Windows & doors,1,Comfort & Energy,190,SMS,Is your home protecting you from the sun?,"UV damage to floors, furniture, skin.",Educate,JOURNEY-P3-04
+53,P3-05,3,Windows & doors,1,Comfort & Energy,193,Email,How much new windows could cut your bill,Savings estimate + financing.,Re-open,JOURNEY-P3-05
+54,P3-06,3,Windows & doors,1,Comfort & Energy,196,Email,"Customer story: cooler, quieter home",Before/after comfort and bill.,Proof,JOURNEY-P3-06
+55,P3-07,3,Windows & doors,1,Comfort & Energy,199,SMS,How old are your windows?,Age awareness. Inspection offer.,Offer,JOURNEY-P3-07
+56,P3-08,3,Windows & doors,1,Comfort & Energy,202,Email,Windows + energy upgrade = the savings combo,Bundle back to Phase 2.,Bundle,JOURNEY-P3-08
+57,P3-09,3,Windows & doors,2,Home Value & Security,205,Email,Windows are the first thing buyers notice,Curb appeal and resale value.,Educate,JOURNEY-P3-09
+58,P3-10,3,Windows & doors,2,Home Value & Security,208,SMS,Security glass: protection you don't see,Safety angle: tempered/laminated options.,Engage,JOURNEY-P3-10
+59,P3-11,3,Windows & doors,2,Home Value & Security,212,Email,3 window styles transforming homes in {City},"Design and style options, visual email.",Educate,JOURNEY-P3-11
+60,P3-12,3,Windows & doors,2,Home Value & Security,216,SMS,Kids' rooms run hottest,Family comfort. Back-to-school timing.,Engage,JOURNEY-P3-12
+61,P3-13,3,Windows & doors,2,Home Value & Security,219,Email,Financing: a monthly payment you can plan for,Payment framing + estimate tool.,Offer,JOURNEY-P3-13
+62,P3-14,3,Windows & doors,2,Home Value & Security,222,SMS,We just installed on a street near you,Neighborhood proof. Send only when it's true.,Proof,JOURNEY-P3-14
+63,P3-15,3,Windows & doors,2,Home Value & Security,225,Email,Guide: choosing windows for {City}'s climate,Value content. Positions {Company} as the expert.,Trust,JOURNEY-P3-15
+64,P3-16,3,Windows & doors,2,Home Value & Security,228,SMS,How comfortable is your home on the hottest days?,Seasonal pain-point question (heat or cold).,Reply,JOURNEY-P3-16
+65,P3-17,3,Windows & doors,3,Final Close & Transition,235,Email,It's been 6+ months. Anything changed at home?,Long-term check-in from {Rep_Name}.,Re-engage,JOURNEY-P3-17
+66,P3-18,3,Windows & doors,3,Final Close & Transition,240,SMS,Seasonal install offer for {City},Real seasonal promotion.,Offer,JOURNEY-P3-18
+67,P3-19,3,Windows & doors,3,Final Close & Transition,245,Email,5 upgrades that raise your home's value this year,Full-home partner framing (all four trades).,Trust,JOURNEY-P3-19
+68,P3-20,3,Windows & doors,3,Final Close & Transition,248,SMS,Free visit or quick call?,Two options: reply VISIT or CALL.,Book,JOURNEY-P3-20
+69,P3-21,3,Windows & doors,3,Final Close & Transition,252,Email,Video: old window vs. new,Before/after demo (thermal camera works well).,Proof,JOURNEY-P3-21
+70,P3-22,3,Windows & doors,3,Final Close & Transition,258,Email,Last chance: free window assessment,Limited weekly slots (real capacity only).,Book,JOURNEY-P3-22
+71,P3-23,3,Windows & doors,3,Final Close & Transition,263,SMS,"{First_Name}, windows: yes or no?",Same binary format as step 47.,Close,JOURNEY-P3-23
+72,P3-24,3,Windows & doors,3,Final Close & Transition,270,Email,One more piece of a comfortable home,Breakup + bridge to Phase 4.,Pivot,JOURNEY-P3-24
+73,P4-01,4,HVAC & indoor air,1,Air Quality & Health,271,Email,Is the air inside your home clean?,Indoor air education. Mirrors the Phase 1 opener.,Pivot,JOURNEY-P4-01
+74,P4-02,4,HVAC & indoor air,1,Air Quality & Health,274,SMS,"Dust, allergens, mold: what your family breathes",Health angle: ducts and filters.,Educate,JOURNEY-P4-02
+75,P4-03,4,HVAC & indoor air,1,Air Quality & Health,277,Email,Allergies or asthma at home?,"Filtration and fresh air, family angle.",Connect,JOURNEY-P4-03
+76,P4-04,4,HVAC & indoor air,1,Air Quality & Health,280,SMS,"Better air, better sleep",Temperature and humidity for sleep.,Engage,JOURNEY-P4-04
+77,P4-05,4,HVAC & indoor air,1,Air Quality & Health,283,Email,Clean water + clean air = a healthy home,Bundle back to Phase 1 (bought or not).,Bundle,JOURNEY-P4-05
+78,P4-06,4,HVAC & indoor air,1,Air Quality & Health,286,Email,"Customer story: ""Our kids breathe easier""","Health outcome, real story, local if possible.",Proof,JOURNEY-P4-06
+79,P4-07,4,HVAC & indoor air,1,Air Quality & Health,289,SMS,When was your system last serviced?,Tune-up / free inspection offer.,Offer,JOURNEY-P4-07
+80,P4-08,4,HVAC & indoor air,1,Air Quality & Health,292,Email,The real cost of an old system,"Efficiency loss, repair costs, energy waste.",Educate,JOURNEY-P4-08
+81,P4-09,4,HVAC & indoor air,2,Efficiency & Savings,295,Email,What do you spend on heating + cooling a year?,Annual cost estimate for {City}.,Re-open,JOURNEY-P4-09
+82,P4-10,4,HVAC & indoor air,2,Efficiency & Savings,298,SMS,"Efficiency ratings, explained simply",What the rating on the unit means for the bill.,Educate,JOURNEY-P4-10
+83,P4-11,4,HVAC & indoor air,2,Efficiency & Savings,302,Email,Whole-home package: special pricing,All four trades as one plan.,Bundle,JOURNEY-P4-11
+84,P4-12,4,HVAC & indoor air,2,Efficiency & Savings,305,SMS,HVAC financing: a payment vs. today's bills,Monthly framing. Real terms only.,Offer,JOURNEY-P4-12
+85,P4-13,4,HVAC & indoor air,2,Efficiency & Savings,308,Email,Is your system ready for the coming season?,Seasonal urgency: install calendars fill up.,Book,JOURNEY-P4-13
+86,P4-14,4,HVAC & indoor air,2,Efficiency & Savings,311,SMS,Smart thermostats: control it from your phone,Technology angle.,Engage,JOURNEY-P4-14
+87,P4-15,4,HVAC & indoor air,2,Efficiency & Savings,315,Email,"Customer story: ""Our bill went down""","Specific, real number.",Proof,JOURNEY-P4-15
+88,P4-16,4,HVAC & indoor air,2,Efficiency & Savings,318,Email,Your home in {City} deserves the best,"Trust: years serving the area, local team.",Trust,JOURNEY-P4-16
+89,P4-17,4,HVAC & indoor air,3,Final Push & Long-Term Loop,325,Email,"We've been in touch almost a year, {First_Name}",Relationship thank-you. Warm tone.,Connect,JOURNEY-P4-17
+90,P4-18,4,HVAC & indoor air,3,Final Push & Long-Term Loop,330,SMS,Has anything changed at home this year?,New baby? Remodel? Selling? Open question.,Reply,JOURNEY-P4-18
+91,P4-19,4,HVAC & indoor air,3,Final Push & Long-Term Loop,335,Email,The best upgrade for your family this year,Year-end summary of the whole-home vision.,Trust,JOURNEY-P4-19
+92,P4-20,4,HVAC & indoor air,3,Final Push & Long-Term Loop,340,SMS,Can I offer one last free home visit?,30-minute no-obligation assessment.,Book,JOURNEY-P4-20
+93,P4-21,4,HVAC & indoor air,3,Final Push & Long-Term Loop,345,Email,A thank-you offer for long-time contacts,"Loyalty pricing (real, not inflated).",Offer,JOURNEY-P4-21
+94,P4-22,4,HVAC & indoor air,3,Final Push & Long-Term Loop,350,SMS,HVAC: yes or no? One word is fine.,Binary close.,Close,JOURNEY-P4-22
+95,P4-23,4,HVAC & indoor air,3,Final Push & Long-Term Loop,358,Email,Thank you for a year of conversation,Genuine thank-you. Not a pitch.,Connect,JOURNEY-P4-23
+96,P4-24,4,HVAC & indoor air,3,Final Push & Long-Term Loop,365,Email,See you next year. We're here when you need us.,Stage -> Long-Term Prospect. Tag JOURNEY-COMPLETE.,Exit,JOURNEY-P4-24

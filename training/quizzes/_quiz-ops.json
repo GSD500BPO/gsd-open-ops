@@ -1,0 +1,221 @@
+{
+ "welcome": [
+  {
+   "q": "A prospect asks where our leads come from. What do you say?",
+   "type": "multiple_choice",
+   "options": [
+    "Explain the exact channels we use",
+    "Our hybrid lead engine, and stop there",
+    "Tell them to ask your manager",
+    "Send them the lead description"
+   ],
+   "correct": "Our hybrid lead engine, and stop there",
+   "explanation": "Lead source is confidential. Say 'our hybrid lead engine' and stop there."
+  },
+  {
+   "q": "your manager says 'let's go with plan A' for a campaign. Can you send it now?",
+   "type": "multiple_choice",
+   "options": [
+    "Yes, choosing a plan is approval",
+    "Yes, if the draft passed QA",
+    "No, send a review copy and wait for an explicit 'send' naming that send",
+    "Only to half of the list"
+   ],
+   "correct": "No, send a review copy and wait for an explicit 'send' naming that send",
+   "explanation": "Choosing a plan is not approval to send."
+  },
+  {
+   "q": "In the 3-3-3 program, Phase 2 (OBSERVED) means you lead 3 calls while your manager listens and scores.",
+   "type": "true_false",
+   "correct": "true",
+   "explanation": "Phase 1 is WITH the manager, Phase 2 OBSERVED, Phase 3 ALONE."
+  },
+  {
+   "q": "Which line may marketing texts be sent from?",
+   "type": "multiple_choice",
+   "options": [
+    "Any company number",
+    "Your personal phone",
+    "Only the company's registered 10DLC texting line",
+    "The calls-only line"
+   ],
+   "correct": "Only the company's registered 10DLC texting line",
+   "explanation": "Texts go only from the registered 10DLC texting line; the other line is calls-only."
+  }
+ ],
+ "role-and-kpis": [
+  {
+   "q": "What is the weekly minimum of qualified booked appointments?",
+   "type": "multiple_choice",
+   "options": [
+    "2",
+    "4",
+    "6",
+    "10"
+   ],
+   "correct": "4",
+   "explanation": "4 is the floor, not the ceiling; the target is 6+."
+  },
+  {
+   "q": "How fast must a new lead get its first call during business hours?",
+   "type": "multiple_choice",
+   "options": [
+    "Within 5 minutes",
+    "Within 30 minutes",
+    "Within 2 hours",
+    "The next business day"
+   ],
+   "correct": "Within 5 minutes",
+   "explanation": "The 5-minute rule."
+  },
+  {
+   "q": "An appointment counts even if it was not reconfirmed the day before, as long as it is in Zoho.",
+   "type": "true_false",
+   "correct": "false",
+   "explanation": "It must be confirmed, logged in Zoho, have a complete handoff and be reconfirmed the day before."
+  },
+  {
+   "q": "What is the '3 touches in 48 h' sequence?",
+   "type": "multiple_choice",
+   "options": [
+    "Three calls in one hour",
+    "Call, approved text from the registered texting line, then a second call + CRM email the next business day",
+    "Three emails in two days",
+    "Text, text, call"
+   ],
+   "correct": "Call, approved text from the registered texting line, then a second call + CRM email the next business day",
+   "explanation": "After that the lead goes stale and into the weekly revive cycle."
+  }
+ ],
+ "scrum-trello": [
+  {
+   "q": "What is the maximum number of cards per person or agent in Doing?",
+   "type": "multiple_choice",
+   "options": [
+    "1",
+    "2",
+    "5",
+    "No limit"
+   ],
+   "correct": "2",
+   "explanation": "Max 2 cards per person or agent in Doing."
+  },
+  {
+   "q": "A card in Doing has shown no progress for 2 hours. What do you do?",
+   "type": "multiple_choice",
+   "options": [
+    "Wait until the Friday review",
+    "Step in: ask, split it, or move it to Blocked with the reason",
+    "Delete it",
+    "Mark it done"
+   ],
+   "correct": "Step in: ask, split it, or move it to Blocked with the reason",
+   "explanation": "The 2-hour rule."
+  },
+  {
+   "q": "Someone says 'it's done'. Is that enough evidence to move the card to We Get Sh*t Done!?",
+   "type": "true_false",
+   "correct": "false",
+   "explanation": "Evidence (link, screenshot, Zoho ID, log) and independent live verification are required."
+  },
+  {
+   "q": "How long is the daily standup?",
+   "type": "multiple_choice",
+   "options": [
+    "15 minutes max",
+    "30 minutes",
+    "1 hour",
+    "As long as needed"
+   ],
+   "correct": "15 minutes max",
+   "explanation": "Mon–Fri 8:00 a.m. COT, 15 minutes max."
+  }
+ ],
+ "crm-process": [
+  {
+   "q": "How do you search for duplicate records?",
+   "type": "multiple_choice",
+   "options": [
+    "By full name",
+    "By the last 10 digits of the phone number or by email",
+    "By city",
+    "By lead owner"
+   ],
+   "correct": "By the last 10 digits of the phone number or by email",
+   "explanation": "Never match by name; many people share a name."
+  },
+  {
+   "q": "When may you send the post-call 'Great connecting…' template?",
+   "type": "multiple_choice",
+   "options": [
+    "To any warm lead",
+    "Only after a real conversation with that person",
+    "As the first cold outreach",
+    "To leads with a high engagement score"
+   ],
+   "correct": "Only after a real conversation with that person",
+   "explanation": "Never mix template sets."
+  },
+  {
+   "q": "Zoho merges can be undone later if you merge the wrong records.",
+   "type": "true_false",
+   "correct": "false",
+   "explanation": "Merges are irreversible; ask your manager if in doubt."
+  },
+  {
+   "q": "A new lead's Day 0 email does not appear in the Emails tab after 5 minutes. What do you do?",
+   "type": "multiple_choice",
+   "options": [
+    "Build a new workflow rule",
+    "Send the email manually from your inbox",
+    "Check the rule is active, the email and language fields, then tell your manager with the lead's name",
+    "Ignore it"
+   ],
+   "correct": "Check the rule is active, the email and language fields, then tell your manager with the lead's name",
+   "explanation": "Report, don't build parallel objects."
+  }
+ ],
+ "qa-scorecard": [
+  {
+   "q": "A call scores 72 with no critical fail. Which band is it?",
+   "type": "multiple_choice",
+   "options": [
+    "Good",
+    "Bad",
+    "Ugly"
+   ],
+   "correct": "Bad",
+   "explanation": "Good 85–100, Bad 60–84, Ugly under 60 or any critical fail."
+  },
+  {
+   "q": "Which of these is a critical fail (automatic Ugly)?",
+   "type": "multiple_choice",
+   "options": [
+    "Using the prospect's name only twice",
+    "Giving a price without authorization",
+    "A 3-minute call",
+    "Offering two time options"
+   ],
+   "correct": "Giving a price without authorization",
+   "explanation": "Critical fails: lead source, unauthorized price, ignoring STOP, lying, disrespect, booking without address/time."
+  },
+  {
+   "q": "Before a bulk SMS, you remove anyone texted from the registered texting line in the last how many days?",
+   "type": "multiple_choice",
+   "options": [
+    "3",
+    "7",
+    "14",
+    "30"
+   ],
+   "correct": "14",
+   "explanation": "14-day suppression, plus anyone who ever said STOP."
+  },
+  {
+   "q": "Ugly calls are escalated to your manager the same day.",
+   "type": "true_false",
+   "correct": "true",
+   "explanation": "Ugly calls carry compliance, brand or client risk."
+  }
+ ]
+}

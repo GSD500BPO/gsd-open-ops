@@ -1,0 +1,10 @@
+# talent.py, intake_server.py, wa_webhook.py, hire_alert.py use only the Python standard library.
+# The speaking scorer and roleplay transcription need these (install into .venv):
+faster-whisper>=1.0
+transformers>=4.40
+torch>=2.2
+speechbrain>=1.0
+language-tool-python>=2.8
+soundfile>=0.12
+numpy>=1.26
+# System packages: ffmpeg, pdftotext (poppler-utils), Java 17+ for LanguageTool

@@ -1,0 +1,44 @@
+{
+  "zoho-1-crm-basics": [
+    {"q": "What happens when you convert a Lead in Zoho CRM?", "type": "multiple_choice", "options": ["The Lead is deleted with no new records", "It becomes a Contact (and optionally an Account and a Deal)", "It becomes a Campaign", "Nothing changes"], "correct": "It becomes a Contact (and optionally an Account and a Deal)", "explanation": "Conversion creates Contact/Account and optionally a Deal."},
+    {"q": "Where do you check new Zoho CRM features so you don't report them as bugs?", "type": "multiple_choice", "options": ["The monthly \"What's New in Zoho CRM\" roundup", "A random forum", "Nowhere; new buttons are always bugs", "The billing page"], "correct": "The monthly \"What's New in Zoho CRM\" roundup", "explanation": "Official monthly feature roundup."},
+    {"q": "Practice for this track happens in the sandbox / test account, never on real client records without approval.", "type": "true_false", "correct": "true", "explanation": "Golden rule of the Zoho track."}
+  ],
+  "zoho-2-records-pipelines": [
+    {"q": "Why can a layout make a field mandatory only at certain stages?", "type": "multiple_choice", "options": ["To slow reps down", "So each stage captures the data it needs before the deal moves on", "Because Zoho requires it", "It can't"], "correct": "So each stage captures the data it needs before the deal moves on", "explanation": "Stage-based requirements keep data clean."},
+    {"q": "What decides which leads get called first?", "type": "multiple_choice", "options": ["Alphabetical order", "Lead scoring (plus how new the lead is)", "Whoever has the longest name", "Random"], "correct": "Lead scoring (plus how new the lead is)", "explanation": "Read and sanity-check scores."},
+    {"q": "Why might one Zoho org have several pipelines?", "type": "multiple_choice", "options": ["To separate different processes or clients (e.g. one per BPO client)", "Pipelines are decoration", "To duplicate every deal", "It's not possible"], "correct": "To separate different processes or clients (e.g. one per BPO client)", "explanation": "Pipelines map to distinct sales processes."}
+  ],
+  "zoho-3-activities": [
+    {"q": "Which three activity types do you create when setting appointments?", "type": "multiple_choice", "options": ["Tasks, Calls and Meetings", "Invoices, Quotes and Orders", "Campaigns, Lists and Segments", "Notes only"], "correct": "Tasks, Calls and Meetings", "explanation": "Schedule calls, log outcomes, create meetings with reminders."},
+    {"q": "After an outbound call you log the outcome and schedule the follow-up in Zoho.", "type": "true_false", "correct": "true", "explanation": "If it's not in Zoho, it didn't happen."},
+    {"q": "A booked appointment should be a Meeting linked to the Lead/Deal with a reminder.", "type": "true_false", "correct": "true", "explanation": "That's the record the team and automations rely on."}
+  ],
+  "zoho-4-data-quality": [
+    {"q": "How many records can you merge at once, and can a merge be undone?", "type": "multiple_choice", "options": ["10, and yes it can be undone", "Up to 3, and merges are irreversible", "Unlimited, reversible within 24h", "2, reversible"], "correct": "Up to 3, and merges are irreversible", "explanation": "That's why you review before merging and ask when in doubt."},
+    {"q": "GSD finds duplicates by…", "type": "multiple_choice", "options": ["Matching names", "Last 10 digits of the phone or email, never by name", "Company size", "Creation date"], "correct": "Last 10 digits of the phone or email, never by name", "explanation": "Many same-name records are different people."},
+    {"q": "Which is a good daily QA view?", "type": "multiple_choice", "options": ["\"Leads with no activity in 7 days\"", "\"All records ever\"", "\"Deleted records\"", "\"Records created on Sundays\""], "correct": "\"Leads with no activity in 7 days\"", "explanation": "QA queues catch stale leads and stuck deals."},
+    {"q": "Before an import, you choose how duplicates are handled during field mapping.", "type": "true_false", "correct": "true", "explanation": "Import + field mapping + duplicate handling."}
+  ],
+  "zoho-5-automation": [
+    {"q": "What's the difference between a workflow rule and a blueprint?", "type": "multiple_choice", "options": ["None", "A workflow rule fires actions automatically on a trigger; a blueprint enforces the process step by step through transitions", "Blueprints send emails; rules don't", "Rules are only for Campaigns"], "correct": "A workflow rule fires actions automatically on a trigger; a blueprint enforces the process step by step through transitions", "explanation": "Know what touches a record before editing it."},
+    {"q": "Cadences are…", "type": "multiple_choice", "options": ["Automated follow-up sequences of emails, calls and tasks", "A type of report", "User roles", "Billing cycles"], "correct": "Automated follow-up sequences of emails, calls and tasks", "explanation": "GSD uses them for nurture; you enrol/unenrol and QA them."},
+    {"q": "Before editing a record, you check which rules, blueprint or cadence affect it.", "type": "true_false", "correct": "true", "explanation": "Avoid triggering automation by accident."}
+  ],
+  "zoho-6-campaigns": [
+    {"q": "Why do we never send a campaign to a purchased list?", "type": "multiple_choice", "options": ["It's too expensive", "Zoho's anti-spam policy requires permission-based email; violations can suspend the account", "Purchased lists are always in Spanish", "There's no reason"], "correct": "Zoho's anti-spam policy requires permission-based email; violations can suspend the account", "explanation": "Opt-in, unsubscribe link, no purchased lists."},
+    {"q": "A contact replied STOP or unsubscribed but is still on a list. What do you do?", "type": "multiple_choice", "options": ["Leave them; one more email is fine", "Remove/suppress them and mark the opt-out in the CRM the same day", "Move them to a different list", "Email them to confirm"], "correct": "Remove/suppress them and mark the opt-out in the CRM the same day", "explanation": "Opt-outs are honored immediately."},
+    {"q": "Which number in a campaign report warns you of a deliverability problem?", "type": "multiple_choice", "options": ["Opens", "Bounces and spam complaints", "Clicks", "Send time"], "correct": "Bounces and spam complaints", "explanation": "High bounces/complaints hurt the sending domain."},
+    {"q": "Test sends of a campaign draft go only to internal addresses.", "type": "true_false", "correct": "true", "explanation": "Then the review copy waits for your manager's explicit OK."}
+  ],
+  "zoho-7-flow": [
+    {"q": "What is a trigger in Zoho Flow?", "type": "multiple_choice", "options": ["The event that starts a flow (e.g. an app event, a schedule or a webhook)", "A report", "A user role", "An email template"], "correct": "The event that starts a flow (e.g. an app event, a schedule or a webhook)", "explanation": "App, schedule and webhook triggers."},
+    {"q": "A customer booked in Bookings but doesn't appear in CRM. Where do you look first?", "type": "multiple_choice", "options": ["The flow's run history, to find the step that failed", "Delete and recreate the booking", "Email the customer", "The billing page"], "correct": "The flow's run history, to find the step that failed", "explanation": "History/logs show where a run failed."},
+    {"q": "The path is: Bookings booking → Flow → CRM record and meeting.", "type": "true_false", "correct": "true", "explanation": "That's the appointment-setting pipeline."}
+  ],
+  "zoho-8-bookings": [
+    {"q": "Where do you confirm, reschedule and mark no-shows?", "type": "multiple_choice", "options": ["The Bookings appointment dashboard", "Zoho Campaigns", "Trello", "The CRM import screen"], "correct": "The Bookings appointment dashboard", "explanation": "Appointment dashboard in Zoho Bookings."},
+    {"q": "What do you send a lead so they can self-book?", "type": "multiple_choice", "options": ["The booking page link", "Your personal calendar password", "A spreadsheet", "Nothing"], "correct": "The booking page link", "explanation": "Customers can book from the website/booking page."},
+    {"q": "Website chats from SalesIQ can become Leads in the CRM.", "type": "true_false", "correct": "true", "explanation": "Know where they land and how they convert."}
+  ]
+}

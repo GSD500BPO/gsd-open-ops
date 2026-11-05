@@ -1,0 +1,146 @@
+{
+ "id": "storm_restoration",
+ "title": "Storm restoration inbound call",
+ "persona": "Homeowner",
+ "persona_emoji": "🏠",
+ "web_intro": "You're the agent. A <b>homeowner</b> is calling after a storm damaged their roof. You'll hear <b>5 situations</b>. Answer each one <b>out loud, in English</b>, like a real call (20–60 seconds).",
+ "goal_html": "Goal: <b>book a free roof inspection</b>.",
+ "wa_intro": "I'll be a *homeowner* calling after a storm. You are the agent.\n\nAnswer each message with a *VOICE NOTE* in English, like you're on the phone (30–60 sec). There are *5 rounds*. Be warm, take control and try to *book a free roof inspection*.\n\nReady? Here's the call 📞",
+ "rounds": [
+  {
+   "say": "Hi... uh, I saw your number online. My roof started leaking last night after the storm and there's water coming through the ceiling. Who am I talking to?",
+   "goal": "Open: greet + company + empathy + take control (name, address)",
+   "rubric": [
+    [
+     "greeting/company",
+     "\\b(thank(s)? for calling|this is|my name is|restoration)\\b",
+     3
+    ],
+    [
+     "empathy",
+     "\\b(sorry|understand|i hear you|no worries|don'?t worry|we('| a)re here|that sounds)\\b",
+     4
+    ],
+    [
+     "asks name",
+     "\\b(your name|who am i speaking|may i have|can i get your name)\\b",
+     3
+    ],
+    [
+     "asks address/details",
+     "\\b(address|where (are you|is the (house|property))|zip|location)\\b",
+     4
+    ],
+    [
+     "next step",
+     "\\b(inspect|inspection|send (someone|a tech|our team)|come out|schedule|appointment|today|tomorrow)\\b",
+     6
+    ]
+   ]
+  },
+  {
+   "say": "Okay but how much is this going to cost me? I really don't have money for a new roof right now.",
+   "goal": "Price objection: free inspection + insurance usually covers + book",
+   "rubric": [
+    [
+     "empathy",
+     "\\b(understand|totally|i hear you|makes sense|of course)\\b",
+     3
+    ],
+    [
+     "free inspection",
+     "\\b(free|no cost|no charge|doesn'?t cost)\\b",
+     6
+    ],
+    [
+     "insurance",
+     "\\b(insurance|claim|policy|deductible|covered|coverage)\\b",
+     6
+    ],
+    [
+     "books",
+     "\\b(schedule|appointment|inspection|come out|available|today|tomorrow|morning|afternoon)\\b",
+     5
+    ]
+   ]
+  },
+  {
+   "say": "My insurance company already said they're sending their own adjuster. Why would I need you guys?",
+   "goal": "Adjuster objection: we work WITH insurance, document everything, protect the homeowner",
+   "rubric": [
+    [
+     "acknowledge",
+     "\\b(great|good|that'?s (good|great|fine)|perfect|understand)\\b",
+     3
+    ],
+    [
+     "works with insurance",
+     "\\b(work with|alongside|together with|meet the adjuster|be there (with|when))\\b",
+     6
+    ],
+    [
+     "documents/protects",
+     "\\b(document|photos?|pictures|report|make sure|protect|don'?t (miss|leave)|full (value|amount)|missed)\\b",
+     6
+    ],
+    [
+     "books",
+     "\\b(schedule|before the adjuster|inspection|appointment|come out|time)\\b",
+     5
+    ]
+   ]
+  },
+  {
+   "say": "Hmm, I need to talk to my husband first before anyone comes to the house.",
+   "goal": "Spouse objection: invite both, offer a time when both are home, lock it in",
+   "rubric": [
+    [
+     "respect",
+     "\\b(of course|absolutely|totally|makes sense|understand|great idea)\\b",
+     4
+    ],
+    [
+     "include spouse",
+     "\\b(both|together|him|husband|you two|when he'?s (home|there|available))\\b",
+     6
+    ],
+    [
+     "offers time",
+     "\\b(\\d{1,2}(:\\d\\d)?\\s?(am|pm)?|morning|afternoon|evening|tomorrow|today|saturday|weekend|what time)\\b",
+     5
+    ],
+    [
+     "locks it in",
+     "\\b(schedule|book|put you down|reserve|confirm|lock)\\b",
+     5
+    ]
+   ]
+  },
+  {
+   "say": "Look, I'm really busy right now. Can you just email me something and I'll look at it later?",
+   "goal": "Brush-off: keep control, 30-second value, confirm address + time now, then send confirmation",
+   "rubric": [
+    [
+     "acknowledge",
+     "\\b(understand|totally|of course|sure|absolutely|respect)\\b",
+     3
+    ],
+    [
+     "urgency/value",
+     "\\b(water|damage|mold|worse|leak|quick(ly)?|only take|minute|seconds)\\b",
+     5
+    ],
+    [
+     "asks to confirm now",
+     "\\b(confirm|real quick|before (you go|i let you go)|just need|address|best (time|number))\\b",
+     6
+    ],
+    [
+     "books + sends",
+     "\\b(schedule|inspection|appointment|email (you|the) (confirmation|details)|text you|send you)\\b",
+     6
+    ]
+   ]
+  }
+ ]
+}

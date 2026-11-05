@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prequalification Test</title>
+<!-- Stand-alone apply page: English + Sales + Typing. No framework, no build step.
+     Configure INTAKE below to point at intake_server.py (POST JSON). Questions come from prequal-test.json. -->
+<style>
+  :root { --bg:#0b0d0c; --card:#151917; --text:#eef3f0; --muted:#9aa5a0; --accent:#21e957; --err:#ff6b6b; }
+  @media (prefers-color-scheme: light) { :root { --bg:#f5f7f6; --card:#fff; --text:#111; --muted:#5b6661; --accent:#0a9b39; } }
+  * { box-sizing:border-box } body { margin:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui, sans-serif }
+  .wrap { max-width:680px; margin:0 auto; padding:24px 16px 64px } .card { background:var(--card); border-radius:14px; padding:20px; margin:16px 0 }
+  h1 { font-size:24px; margin:0 0 8px } .muted { color:var(--muted) } label { display:block; margin:12px 0 4px; font-weight:600 }
+  input, textarea { width:100%; padding:10px; border-radius:8px; border:1px solid #3a4440; background:transparent; color:inherit; font:inherit }
+  .opt { display:block; width:100%; text-align:left; margin:6px 0; padding:10px; border-radius:8px; border:1px solid #3a4440; background:transparent; color:inherit; font:inherit; cursor:pointer }
+  .opt.sel { border-color:var(--accent); outline:2px solid var(--accent) } button.go { margin-top:16px; width:100%; padding:12px; border:0; border-radius:10px; background:var(--accent); color:#000; font-weight:700; font:inherit; cursor:pointer }
+  button.go:disabled { opacity:.4 } .err { color:var(--err) } .hide { display:none } .q { margin:18px 0 } .q p { font-weight:600; margin:0 0 6px }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card" id="s-info">
+    <h1>Prequalification test</h1>
+    <p class="muted">Three quick modules (about 10 minutes): English, Sales, Typing. Use the same WhatsApp number you applied with.</p>
+    <label for="name">Full name</label><input id="name" autocomplete="name">
+    <label for="email">Email</label><input id="email" type="email" autocomplete="email">
+    <label for="phone">WhatsApp number (with country code)</label><input id="phone" type="tel" autocomplete="tel" placeholder="+1 555 000 0000">
+    <div class="err" id="err-info"></div>
+    <button class="go" id="b-start">Start</button>
+  </div>
+  <div class="card hide" id="s-english"><h1>1 · English</h1><div id="q-english"></div><button class="go" id="b-sales" disabled>Continue to sales</button></div>
+  <div class="card hide" id="s-sales"><h1>2 · Sales</h1><div id="q-sales"></div><button class="go" id="b-typing" disabled>Continue to typing</button></div>
+  <div class="card hide" id="s-typing"><h1>3 · Typing</h1><p class="muted">Type this text exactly. The timer starts on your first key.</p>
+    <p id="sample"></p><textarea id="typed" rows="5"></textarea><button class="go" id="b-submit">Submit application</button><div class="err" id="err-submit"></div></div>
+  <div class="card hide" id="s-done"><h1>✅ Thank you!</h1><p>Your results are in. Our recruiting team will contact you on WhatsApp.</p></div>
+</div>
+<script>
+const INTAKE = '/talent';                // intake_server.py endpoint (same origin, or set an absolute URL allowed by TALENT_CORS_ORIGINS)
+const $ = id => document.getElementById(id), qs = new URLSearchParams(location.search);
+$('phone').value = qs.get('p') || ''; $('email').value = qs.get('e') || '';
+let T, ans = { english:{}, sales:{} }, t0 = null;
+fetch('prequal-test.json').then(r => r.json()).then(j => { T = j; $('sample').textContent = j.typing_sample; });
+function show(id) { for (const s of ['s-info','s-english','s-sales','s-typing','s-done']) $(s).classList.toggle('hide', s !== id); scrollTo(0, 0); }
+function renderQs(kind, btn) {
+  const box = $('q-' + kind); box.innerHTML = '';
+  T[kind].forEach((q, qi) => {
+    const d = document.createElement('div'); d.className = 'q';
+    const p = document.createElement('p'); p.textContent = (qi + 1) + '. ' + q.prompt; d.appendChild(p);
+    q.options.forEach((o, i) => { const b = document.createElement('button'); b.className = 'opt'; b.type = 'button'; b.textContent = o;
+      b.onclick = () => { ans[kind][q.id] = i; [...d.querySelectorAll('.opt')].forEach(x => x.classList.remove('sel')); b.classList.add('sel');
+        $(btn).disabled = Object.keys(ans[kind]).length < T[kind].length; }; d.appendChild(b); });
+    box.appendChild(d);
+  });
+}
+const mcq = kind => Math.round(100 * T[kind].filter(q => ans[kind][q.id] === q.correctIndex).length / T[kind].length);
+function accuracy(s, t) { if (!t.length) return 0; let h = 0; for (let i = 0; i < Math.min(s.length, t.length); i++) if (s[i] === t[i]) h++; return Math.round(100 * h / Math.max(s.length, t.length)); }
+$('b-start').onclick = () => {
+  if ($('name').value.trim().length < 3 || $('phone').value.replace(/\D/g, '').length < 8) { $('err-info').textContent = 'Please enter your full name and WhatsApp number.'; return; }
+  renderQs('english', 'b-sales'); show('s-english');
+};
+$('b-sales').onclick = () => { renderQs('sales', 'b-typing'); show('s-sales'); };
+$('b-typing').onclick = () => show('s-typing');
+$('typed').addEventListener('keydown', () => { if (!t0) t0 = Date.now(); });
+$('b-submit').onclick = async () => {
+  const secs = t0 ? (Date.now() - t0) / 1000 : 60, typed = $('typed').value;
+  const wpm = Math.round((typed.length / 5) / (secs / 60)), acc = accuracy(T.typing_sample, typed);
+  const english = mcq('english'), sales = mcq('sales');
+  const typing = Math.min(100, Math.round(Math.min(wpm, 60) / 60 * 60 + acc / 100 * 40));
+  const composite = Math.round(english * 0.45 + sales * 0.35 + typing * 0.2);
+  const assessment = { composite_score: composite, english_score: english, sales_score: sales, typing_wpm: wpm, typing_accuracy: acc,
+                       tier: composite >= 85 ? 3 : composite >= 65 ? 2 : 1 };
+  $('b-submit').disabled = true;
+  try {
+    const r = await fetch(INTAKE, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: $('name').value.trim(), email: $('email').value.trim(), phone: $('phone').value.trim(), assessment }) });
+    if (!r.ok) throw new Error(r.status);
+    show('s-done');
+  } catch (e) { $('err-submit').textContent = 'We could not send your results. Check your connection and try again.'; $('b-submit').disabled = false; }
+};
+</script>
+</body>
+</html>

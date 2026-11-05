@@ -1,0 +1,11 @@
+[Unit]
+Description=LanguageTool server for the speaking scorer (one JVM, localhost only)
+After=network-online.target
+
+[Service]
+User=ramon
+ExecStart=/usr/bin/java -Xmx512m -cp /opt/languagetool/languagetool-server.jar org.languagetool.server.HTTPServer --port 8790
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

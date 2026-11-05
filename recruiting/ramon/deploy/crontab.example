@@ -1,0 +1,5 @@
+# Ramón talent pipeline. Adjust the path. Logs go to ./logs/.
+*/2 * * * * cd /opt/ramon && /usr/bin/python3 talent.py run      >> logs/pipeline.log 2>&1
+5   * * * * cd /opt/ramon && .venv/bin/python talent.py digest   >> logs/pipeline.log 2>&1
+*/2 * * * * cd /opt/ramon && /usr/bin/python3 hire_alert.py      >> logs/pipeline.log 2>&1
+*/2 * * * * cd /opt/ramon && nice -n 10 timeout 1700 .venv/bin/python talent.py rpscore >> logs/pipeline.log 2>&1

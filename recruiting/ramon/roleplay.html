@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{COMPANY}} · Call Roleplay</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#05080a; --card:#0d1418; --line:#1d2a30; --text:#e8f1f2; --muted:#8aa0a6; --neon:#39ff6a; --neon2:#16c784; --warn:#ffb020; --bad:#ff4d4d; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:Poppins,system-ui,sans-serif; }
+  .wrap { max-width:560px; margin:0 auto; padding:20px 16px 48px; }
+  .brand { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.5px; }
+  .brand b { color:var(--neon); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:20px; margin-top:16px; box-shadow:0 0 30px rgba(57,255,106,.06); }
+  h1 { font-size:24px; margin:12px 0 4px; } h2 { font-size:18px; margin:0 0 8px; }
+  p, li { color:var(--muted); line-height:1.5; font-size:15px; }
+  label { display:block; font-size:13px; color:var(--muted); margin:12px 0 4px; }
+  input { width:100%; padding:12px 14px; border-radius:12px; border:1px solid var(--line); background:#071013; color:var(--text); font-size:16px; }
+  button { width:100%; padding:14px; border:0; border-radius:14px; font-weight:800; font-size:16px; cursor:pointer; margin-top:14px; font-family:inherit; }
+  .go { background:var(--neon); color:#02130a; box-shadow:0 0 18px rgba(57,255,106,.35); }
+  .ghost { background:transparent; color:var(--text); border:1px solid var(--line); }
+  .rec { background:var(--bad); color:#fff; }
+  button:disabled { opacity:.45; cursor:not-allowed; }
+  .bubble { background:#0a1f17; border:1px solid #1b4d33; border-radius:16px 16px 16px 4px; padding:16px; font-size:17px; color:var(--text); line-height:1.5; }
+  .who { font-size:12px; text-transform:uppercase; letter-spacing:1px; color:var(--neon2); margin-bottom:6px; font-weight:600; }
+  .steps { display:flex; gap:6px; margin:14px 0; } .steps i { flex:1; height:6px; border-radius:6px; background:var(--line); } .steps i.on { background:var(--neon); } .steps i.done { background:var(--neon2); }
+  .timer { font-size:34px; font-weight:800; text-align:center; margin-top:10px; font-variant-numeric:tabular-nums; }
+  .dot { display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--bad); margin-right:8px; animation:p 1s infinite; } @keyframes p { 50% { opacity:.2 } }
+  .tip { font-size:13px; color:var(--muted); text-align:center; margin-top:8px; }
+  .err { color:var(--bad); font-size:14px; margin-top:10px; }
+  .hide { display:none; }
+  .meter { height:8px; background:var(--line); border-radius:8px; overflow:hidden; margin-top:10px; } .meter b { display:block; height:100%; width:0; background:var(--neon); transition:width .1s; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">{{COMPANY}} · <span style="color:var(--muted);font-weight:600">Careers</span></div>
+
+  <div id="inapp" class="card hide" style="border-color:var(--warn)">
+    <h2>⚠️ Open this in Chrome</h2>
+    <p>The WhatsApp/Facebook browser can't record your voice. Tap below to open the roleplay in Chrome.</p>
+    <a id="openchrome" href="#"><button class="go">Open in Chrome</button></a>
+    <p class="tip">Or tap ⋮ (top right) → "Open in Chrome".</p>
+  </div>
+  <!-- intro -->
+  <div id="s-intro" class="card">
+    <h1>Phone roleplay 🎧</h1>
+    <p>{{SCENARIO_INTRO}}</p>
+    <ul>
+      <li>Be warm and calm, take control of the call.</li>
+      <li>{{SCENARIO_GOAL}}</li>
+      <li>Use a quiet place. Headphones help.</li>
+    </ul>
+    <label for="name">Full name</label><input id="name" autocomplete="name">
+    <label for="phone">WhatsApp number</label><input id="phone" type="tel" autocomplete="tel" placeholder="+1 555 000 0000">
+    <button class="go" id="btn-mic">Test my microphone</button>
+    <div class="meter hide" id="meter"><b id="lvl"></b></div>
+    <div class="err" id="err-intro"></div>
+    <button class="go hide" id="btn-start">Start the call 📞</button>
+  </div>
+
+  <!-- round -->
+  <div id="s-round" class="card hide">
+    <div class="steps" id="steps"></div>
+    <div id="calling" class="hide" style="text-align:center;padding:10px 0"><div style="font-size:40px">📞</div><div class="who" id="callmsg">Incoming call…</div></div>
+    <div class="who">{{PERSONA}} · round <span id="rn">1</span>/5</div>
+    <div class="bubble" id="say"></div>
+    <button class="ghost" id="btn-play">🔊 Play the customer</button>
+    <div class="timer" id="timer">0:00</div>
+    <button class="rec" id="btn-rec">🎙️ Answer (record)</button>
+    <button class="go hide" id="btn-stop">■ Stop &amp; send</button>
+    <div class="tip" id="tip">Tap record, answer like you're on the phone, then tap stop.</div>
+    <div class="err" id="err-round"></div>
+  </div>
+
+  <!-- done -->
+  <div id="s-done" class="card hide">
+    <h1>✅ Great job!</h1>
+    <p>Your call was recorded. Our recruiting team reviews every answer and will contact you on WhatsApp with the next step.</p>
+    <p style="color:var(--text)">— {{BOT_NAME}}, {{COMPANY}} HR</p>
+  </div>
+</div>
+<script>
+const qs = new URLSearchParams(location.search);
+const API = location.pathname.replace(/\/roleplay\/?$/, '') + '/roleplay';
+const $ = id => document.getElementById(id);
+const SS = window.speechSynthesis || null;
+function report(where, e) { try { navigator.sendBeacon && navigator.sendBeacon(API + '/log', JSON.stringify({ sid, where, msg: String(e && (e.stack || e.message) || e).slice(0, 400), ua: navigator.userAgent })); } catch (_) {} }
+window.addEventListener('error', ev => report('window', ev.error || ev.message));
+window.addEventListener('unhandledrejection', ev => report('promise', ev.reason));
+const UA = navigator.userAgent;
+if (/\bwv\b|WhatsApp|FBAN|FBAV|Instagram|Line\//i.test(UA) || !navigator.mediaDevices || !window.MediaRecorder) {
+  $('inapp').classList.remove('hide');
+  const u = location.href.replace(/^https?:\/\//, '');
+  $('openchrome').href = /android/i.test(UA) ? 'intent://' + u + '#Intent;scheme=https;package=com.android.chrome;end' : location.href;
+  report('inapp', UA);
+}
+let sid = null, rounds = [], rnd = 0, stream = null, rec = null, chunks = [], t0 = 0, tick = null, voice = null;
+$('phone').value = qs.get('p') || '';
+$('name').value = qs.get('n') || '';
+
+function pickVoice() {
+  const vs = speechSynthesis.getVoices().filter(v => /^en(-|_)US/i.test(v.lang));
+  voice = vs.find(v => /female|samantha|jenny|aria|google us english/i.test(v.name)) || vs[0] || null;
+}
+if (SS) { try { pickVoice(); SS.onvoiceschanged = pickVoice; } catch (e) { report('voices', e); } }
+function speak(text) {
+  if (!SS) return;
+  try { SS.cancel(); const u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = 0.97; if (voice) u.voice = voice; SS.speak(u); }
+  catch (e) { report('speak', e); }
+}
+function ring(ms) {               // short phone ring with WebAudio (no files)
+  try { const C = window.AudioContext || window.webkitAudioContext; if (!C) return; const ctx = new C(); const t = ctx.currentTime;
+    [0, 0.5, 1.2, 1.7].forEach(o => { const g = ctx.createGain(), a = ctx.createOscillator(), b2 = ctx.createOscillator();
+      a.frequency.value = 440; b2.frequency.value = 480; a.connect(g); b2.connect(g); g.connect(ctx.destination);
+      g.gain.setValueAtTime(0.08, t + o); g.gain.setValueAtTime(0, t + o + 0.4); a.start(t + o); b2.start(t + o); a.stop(t + o + 0.4); b2.stop(t + o + 0.4); });
+    setTimeout(() => ctx.close(), ms || 2500); } catch (e) { report('ring', e); }
+}
+function mime() {
+  for (const m of ['audio/webm;codecs=opus', 'audio/mp4', 'audio/ogg;codecs=opus', 'audio/webm'])
+    if (window.MediaRecorder && MediaRecorder.isTypeSupported(m)) return m;
+  return '';
+}
+$('btn-mic').onclick = async () => {
+  $('err-intro').textContent = '';
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true } });
+    const ctx = new (window.AudioContext || window.webkitAudioContext)(), an = ctx.createAnalyser();
+    ctx.createMediaStreamSource(stream).connect(an); const buf = new Uint8Array(an.fftSize);
+    $('meter').classList.remove('hide');
+    (function loop() { an.getByteTimeDomainData(buf); let m = 0; for (const v of buf) m = Math.max(m, Math.abs(v - 128));
+      $('lvl').style.width = Math.min(100, m * 1.6) + '%'; requestAnimationFrame(loop); })();
+    $('btn-mic').textContent = '✅ Microphone works: say something and watch the bar';
+    $('btn-start').classList.remove('hide');
+  } catch (e) { $('err-intro').textContent = 'We could not use your microphone. Allow microphone access in your browser (Chrome works best) and try again.'; }
+};
+$('btn-start').onclick = async () => {
+  const name = $('name').value.trim(), phone = $('phone').value.trim();
+  if (name.length < 3 || phone.replace(/\D/g, '').length < 8) { $('err-intro').textContent = 'Please enter your full name and WhatsApp number.'; return; }
+  $('btn-start').disabled = true;
+  if (SS) { try { SS.speak(new SpeechSynthesisUtterance(' ')); } catch (e) {} }   // unlock voice inside the tap (iOS/Android)
+  ring(2600);
+  try {
+    const r = await fetch(API + '/start', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, phone, test: qs.get('test') === '1' }) }).then(r => r.json());
+    if (!r.sid) throw 0;
+    sid = r.sid; rounds = r.rounds; rnd = 0;
+    $('s-intro').classList.add('hide'); $('s-round').classList.remove('hide');
+    $('calling').classList.remove('hide'); $('callmsg').textContent = 'Incoming call…'; $('btn-rec').disabled = true;
+    setTimeout(() => { $('callmsg').textContent = '✅ Connected'; showRound(); }, 2600);
+  } catch (e) { report('start', e); $('err-intro').textContent = 'Connection problem. Please try again.'; $('btn-start').disabled = false; }
+};
+function showRound() {
+  try { _showRound(); } catch (e) { report('showRound', e); $('err-round').textContent = 'Something went wrong. Please reload the page.'; }
+}
+function _showRound() {
+  $('rn').textContent = rnd + 1; $('say').textContent = '“' + rounds[rnd] + '”';
+  $('steps').innerHTML = rounds.map((_, i) => `<i class="${i < rnd ? 'done' : i === rnd ? 'on' : ''}"></i>`).join('');
+  $('timer').textContent = '0:00'; $('btn-rec').classList.remove('hide'); $('btn-rec').disabled = false;
+  $('btn-stop').classList.add('hide'); $('err-round').textContent = '';
+  $('tip').textContent = 'Tap record, answer like you\'re on the phone, then tap stop.';
+  fetch(API + '/asked', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ sid, round: rnd }) }).catch(() => {});
+  speak(rounds[rnd]);
+}
+$('btn-play').onclick = () => speak(rounds[rnd]);
+$('btn-rec').onclick = () => {
+  if (SS) { try { SS.cancel(); } catch (e) {} }
+  chunks = []; const m = mime();
+  try { rec = new MediaRecorder(stream, m ? { mimeType: m } : undefined); } catch (e) { rec = new MediaRecorder(stream); }
+  rec.ondataavailable = e => e.data.size && chunks.push(e.data);
+  rec.onstop = send;
+  rec.start(); t0 = Date.now();
+  $('btn-rec').classList.add('hide'); $('btn-stop').classList.remove('hide');
+  $('tip').innerHTML = '<span class="dot"></span>Recording… max 90 seconds';
+  tick = setInterval(() => { const s = Math.floor((Date.now() - t0) / 1000);
+    $('timer').textContent = Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); if (s >= 90) stop(); }, 250);
+};
+function stop() { clearInterval(tick); if (rec && rec.state !== 'inactive') rec.stop(); }
+$('btn-stop').onclick = () => {
+  if (Date.now() - t0 < 4000) { $('err-round').textContent = 'That was too short. Keep talking a bit more, then stop.'; return; }
+  stop();
+};
+async function send() {
+  $('btn-stop').disabled = true; $('tip').textContent = 'Sending your answer…';
+  const blob = new Blob(chunks, { type: rec.mimeType || 'audio/webm' });
+  try {
+    const r = await fetch(API + '/answer?sid=' + sid + '&round=' + rnd, { method: 'POST', headers: { 'Content-Type': blob.type }, body: blob }).then(r => r.json());
+    if (!r.ok) throw 0;
+  } catch (e) { $('err-round').textContent = 'Upload failed. Please record that answer again.'; $('btn-stop').disabled = false;
+    $('btn-stop').classList.add('hide'); $('btn-rec').classList.remove('hide'); return; }
+  $('btn-stop').disabled = false; rnd++;
+  if (rnd < rounds.length) return showRound();
+  await fetch(API + '/finish', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ sid }) }).catch(() => {});
+  stream && stream.getTracks().forEach(t => t.stop());
+  $('s-round').classList.add('hide'); $('s-done').classList.remove('hide');
+}
+</script>
+</body>
+</html>

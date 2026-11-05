@@ -1,0 +1,376 @@
+{
+ "call-rules": [
+  {
+   "q": "A dealer asks exactly where our leads come from. What do you say?",
+   "type": "multiple_choice",
+   "options": [
+    "Name the ad platform we use",
+    "\"Our hybrid lead engine,\" and stop there",
+    "\"I'm not allowed to tell you\" and hang up",
+    "Read them the lead's description field"
+   ],
+   "correct": "\"Our hybrid lead engine,\" and stop there",
+   "explanation": "Lead source never leaves GSD. Say 'our hybrid lead engine' and stop."
+  },
+  {
+   "q": "A prospect says \"add us to your do-not-call list.\" What do you do?",
+   "type": "multiple_choice",
+   "options": [
+    "Give one last quick pitch first",
+    "Say you'll remove them, apologize, hang up and mark DNC in the phone system and Zoho before the next dial",
+    "Mark it at the end of the day",
+    "Ask why"
+   ],
+   "correct": "Say you'll remove them, apologize, hang up and mark DNC in the phone system and Zoho before the next dial",
+   "explanation": "No 'but', no second pitch. DNC is marked before your next dial."
+  },
+  {
+   "q": "It's fine to tell a skeptical owner how many appointments a week other clients get, to build trust.",
+   "type": "true_false",
+   "correct": "false",
+   "explanation": "No numbers we can't prove. Offer proof on screen instead."
+  },
+  {
+   "q": "When should you speak after the prospect picks up?",
+   "type": "multiple_choice",
+   "options": [
+    "Within the first 2 seconds",
+    "After they say hello twice",
+    "After 5 seconds so they don't feel rushed",
+    "Only after the IVR finishes"
+   ],
+   "correct": "Within the first 2 seconds",
+   "explanation": "Dead air kills live connects."
+  }
+ ],
+ "call-opener": [
+  {
+   "q": "What is the goal of the opener?",
+   "type": "multiple_choice",
+   "options": [
+    "Pitch every service quickly",
+    "Get permission for 30 seconds, then ask one question",
+    "Book the meeting immediately",
+    "Ask for the owner's cell phone"
+   ],
+   "correct": "Get permission for 30 seconds, then ask one question",
+   "explanation": "Permission, then one question, then silence."
+  },
+  {
+   "q": "Which line is part of the GSD opener?",
+   "type": "multiple_choice",
+   "options": [
+    "\"We guarantee 40 appointments a week.\"",
+    "\"I'm calling to compete for your business the good old-fashioned way.\"",
+    "\"We're sponsored by your manufacturer.\"",
+    "\"This will only take an hour.\""
+   ],
+   "correct": "\"I'm calling to compete for your business the good old-fashioned way.\"",
+   "explanation": "Honest and disarming; it has opened many real conversations."
+  },
+  {
+   "q": "How should you handle mentioning that you're calling from Colombia?",
+   "type": "multiple_choice",
+   "options": [
+    "Avoid saying it at all",
+    "Apologize for it",
+    "Say it once, confidently, then go straight to the question",
+    "Repeat it several times"
+   ],
+   "correct": "Say it once, confidently, then go straight to the question",
+   "explanation": "It's an advantage: same time zone, bilingual team."
+  }
+ ],
+ "call-gatekeeper": [
+  {
+   "q": "An automated call screener asks for your name and reason. What's the best answer?",
+   "type": "multiple_choice",
+   "options": [
+    "Just your first name",
+    "\"Testing the waters\"",
+    "\"{Your name}, GSD 500 BPO, about bilingual appointment setting for water-treatment dealers.\"",
+    "Hang up and call later"
+   ],
+   "correct": "\"{Your name}, GSD 500 BPO, about bilingual appointment setting for water-treatment dealers.\"",
+   "explanation": "One clear line under 10 seconds."
+  },
+  {
+   "q": "If the decision maker isn't available, which three things do you collect?",
+   "type": "multiple_choice",
+   "options": [
+    "Their home address, age and budget",
+    "Whether they have bilingual setters (in-house or outsourced), the owner's best email, and the name of who you spoke to",
+    "Their credit card, email and fax",
+    "Nothing; just call back tomorrow"
+   ],
+   "correct": "Whether they have bilingual setters (in-house or outsourced), the owner's best email, and the name of who you spoke to",
+   "explanation": "Those three make the callback land."
+  },
+  {
+   "q": "When calling back on an agreement, you should name the specific time and promise (e.g. \"he asked me to call at 10 AM today\").",
+   "type": "true_false",
+   "correct": "true",
+   "explanation": "A vague 'he told me to call back' gets sent to voicemail."
+  }
+ ],
+ "call-discovery": [
+  {
+   "q": "How many discovery questions should you ask on a typical call?",
+   "type": "multiple_choice",
+   "options": [
+    "All of them",
+    "3 to 5",
+    "Only 1",
+    "None; go straight to the pitch"
+   ],
+   "correct": "3 to 5",
+   "explanation": "Ask 3 to 5, then listen."
+  },
+  {
+   "q": "A prospect says \"everything is on paper.\" Which service does that open?",
+   "type": "multiple_choice",
+   "options": [
+    "Websites",
+    "CRM automation",
+    "Databases",
+    "Nothing"
+   ],
+   "correct": "CRM automation",
+   "explanation": "No CRM = speed-to-lead and follow-up automation."
+  },
+  {
+   "q": "Halfway through discovery you should check in: \"Am I talking too fast, or is everything okay so far?\"",
+   "type": "true_false",
+   "correct": "true",
+   "explanation": "It keeps the prospect engaged and shows respect."
+  }
+ ],
+ "call-pitch": [
+  {
+   "q": "How many services should you pitch?",
+   "type": "multiple_choice",
+   "options": [
+    "All of them, so they see the full value",
+    "The 1 or 2 that match what you heard in discovery",
+    "Only the most expensive one",
+    "Whatever the prospect asks about first"
+   ],
+   "correct": "The 1 or 2 that match what you heard in discovery",
+   "explanation": "Buzzword lists lose calls."
+  },
+  {
+   "q": "A prospect says \"we need more leads.\" What do you offer first?",
+   "type": "multiple_choice",
+   "options": [
+    "A guaranteed monthly lead count",
+    "A few test leads from our hybrid lead engine, then the terms your manager approves",
+    "A website redesign",
+    "A free month of setters"
+   ],
+   "correct": "A few test leads from our hybrid lead engine, then the terms your manager approves",
+   "explanation": "Start with test leads so the risk is on us."
+  },
+  {
+   "q": "You may improvise a price if it helps close the meeting.",
+   "type": "true_false",
+   "correct": "false",
+   "explanation": "Pricing comes only from the manager's current rate card. Unauthorized pricing is a critical fail."
+  }
+ ],
+ "call-booking": [
+  {
+   "q": "How do you ask for the appointment?",
+   "type": "multiple_choice",
+   "options": [
+    "\"When are you free?\"",
+    "Two specific options: \"tomorrow at 11 or Thursday at 2, your time — which works better?\"",
+    "\"I'll send you a calendar link.\"",
+    "\"Call me when you're ready.\""
+   ],
+   "correct": "Two specific options: \"tomorrow at 11 or Thursday at 2, your time — which works better?\"",
+   "explanation": "Two specific options in their time zone."
+  },
+  {
+   "q": "Which three things must you have before ending a live call?",
+   "type": "multiple_choice",
+   "options": [
+    "Date and time, an email for the invite, and a channel for the reminder",
+    "Their budget, title and company size",
+    "A signed contract",
+    "Their social media handles"
+   ],
+   "correct": "Date and time, an email for the invite, and a channel for the reminder",
+   "explanation": "Calls that ended on 'I'll send you an email' stalled."
+  },
+  {
+   "q": "When should the confirmation call happen?",
+   "type": "multiple_choice",
+   "options": [
+    "A week before",
+    "30 to 60 minutes before the meeting (plus the day-before confirmation)",
+    "Never; the invite is enough",
+    "After the meeting"
+   ],
+   "correct": "30 to 60 minutes before the meeting (plus the day-before confirmation)",
+   "explanation": "Confirm the day before and again 30–60 minutes before."
+  },
+  {
+   "q": "You should ask the prospect to be in front of a computer so they can see the calendars.",
+   "type": "true_false",
+   "correct": "true",
+   "explanation": "The demo is on screen."
+  }
+ ],
+ "call-objections": [
+  {
+   "q": "\"How did you get my number?\" Best answer:",
+   "type": "multiple_choice",
+   "options": [
+    "\"I'd rather not say.\"",
+    "\"You're listed as an authorized dealer on {brand}'s public dealer locator. That's where I found you.\"",
+    "\"From our ad campaign.\"",
+    "\"Someone gave it to me.\""
+   ],
+   "correct": "\"You're listed as an authorized dealer on {brand}'s public dealer locator. That's where I found you.\"",
+   "explanation": "Specific and true keeps the call alive."
+  },
+  {
+   "q": "\"I don't have a lot of time / call me later.\" What do you do?",
+   "type": "multiple_choice",
+   "options": [
+    "Say 'ok, sure' and hang up",
+    "Offer two specific times (tonight after 8 or tomorrow morning) and confirm the email",
+    "Keep pitching faster",
+    "Send a long email instead"
+   ],
+   "correct": "Offer two specific times (tonight after 8 or tomorrow morning) and confirm the email",
+   "explanation": "'Ok, sure' with no time is a lost lead."
+  },
+  {
+   "q": "\"Prove it.\" What books the meeting?",
+   "type": "multiple_choice",
+   "options": [
+    "Revenue claims about other clients",
+    "Offering real calendars and recordings on screen, starting with test leads so the risk is on us",
+    "Promising a refund",
+    "Telling them to search online"
+   ],
+   "correct": "Offering real calendars and recordings on screen, starting with test leads so the risk is on us",
+   "explanation": "Show, don't tell."
+  },
+  {
+   "q": "If a prospect repeats \"not interested\" or says stop, you exit politely and mark them DNC.",
+   "type": "true_false",
+   "correct": "true",
+   "explanation": "Hard rule #2."
+  }
+ ],
+ "call-voicemail": [
+  {
+   "q": "Maximum length of a voicemail?",
+   "type": "multiple_choice",
+   "options": [
+    "About 2 minutes",
+    "Under 45 seconds",
+    "10 seconds",
+    "No limit"
+   ],
+   "correct": "Under 45 seconds",
+   "explanation": "Short, personal, number twice."
+  },
+  {
+   "q": "How many times do you say the callback number?",
+   "type": "multiple_choice",
+   "options": [
+    "Once",
+    "Twice",
+    "Never; they have caller ID",
+    "Three times fast"
+   ],
+   "correct": "Twice",
+   "explanation": "Slowly, twice."
+  },
+  {
+   "q": "A voicemail should list every GSD service so the prospect knows the full menu.",
+   "type": "true_false",
+   "correct": "false",
+   "explanation": "Monologues listing everything are what we avoid."
+  }
+ ],
+ "call-sms": [
+  {
+   "q": "Which line do texts go out from?",
+   "type": "multiple_choice",
+   "options": [
+    "Any company line",
+    "Only the registered 10DLC texting line",
+    "Your personal phone",
+    "The calls-only line"
+   ],
+   "correct": "Only the registered 10DLC texting line",
+   "explanation": "The other line is calls-only."
+  },
+  {
+   "q": "Someone replies STOP. What do you do?",
+   "type": "multiple_choice",
+   "options": [
+    "Reply with one last offer",
+    "Don't reply with a pitch; mark opt-out/DNC in the phone system and Zoho the same day; stop all contact",
+    "Call them instead",
+    "Wait 14 days and text again"
+   ],
+   "correct": "Don't reply with a pitch; mark opt-out/DNC in the phone system and Zoho the same day; stop all contact",
+   "explanation": "STOP means stop."
+  },
+  {
+   "q": "Marketing texts may go out between 8 a.m. and 8 p.m. in the lead's time zone.",
+   "type": "true_false",
+   "correct": "true",
+   "explanation": "Never outside that window."
+  },
+  {
+   "q": "You may fire a bulk SMS to a list on your own if the template is already approved.",
+   "type": "true_false",
+   "correct": "false",
+   "explanation": "Bulk sends need the full pre-send checklist and a second explicit go from your manager."
+  }
+ ],
+ "graduation-333": [
+  {
+   "q": "What are the three phases of the 3-3-3 program?",
+   "type": "multiple_choice",
+   "options": [
+    "Read, watch, quiz",
+    "3 calls WITH your manager, 3 OBSERVED calls, 3 calls ALONE",
+    "3 days, 3 weeks, 3 months",
+    "3 leads, 3 meetings, 3 sales"
+   ],
+   "correct": "3 calls WITH your manager, 3 OBSERVED calls, 3 calls ALONE",
+   "explanation": "Then you graduate and own your pipeline."
+  },
+  {
+   "q": "What average QA score do you need on Phase 2 and Phase 3 calls?",
+   "type": "multiple_choice",
+   "options": [
+    "60+",
+    "70+",
+    "85+ (Good)",
+    "100"
+   ],
+   "correct": "85+ (Good)",
+   "explanation": "Good = 85–100 on the scorecard."
+  },
+  {
+   "q": "One critical fail (e.g. revealing the lead source or ignoring STOP) resets that phase.",
+   "type": "true_false",
+   "correct": "true",
+   "explanation": "Zero critical fails is required to move on."
+  },
+  {
+   "q": "A voicemail counts as one of your 3-3-3 calls.",
+   "type": "true_false",
+   "correct": "false",
+   "explanation": "Only live conversations with real prospects count."
+  }
+ ]
+}

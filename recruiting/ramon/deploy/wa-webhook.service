@@ -1,0 +1,17 @@
+[Unit]
+Description=Ramón wa-webhook
+After=network-online.target
+
+[Service]
+User=ramon
+WorkingDirectory=/opt/ramon
+ExecStart=/opt/ramon/.venv/bin/python /opt/ramon/wa_webhook.py
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/ramon
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

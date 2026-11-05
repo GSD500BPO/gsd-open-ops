@@ -1,0 +1,292 @@
+{
+ "phases": [
+  {
+   "key": "orientation",
+   "en": "1. Orientation",
+   "es": "1. Orientación"
+  },
+  {
+   "key": "calls",
+   "en": "2. Calls: scripts EN / ES",
+   "es": "2. Llamadas: guiones EN / ES"
+  },
+  {
+   "key": "crm_qa",
+   "en": "3. CRM process & QA",
+   "es": "3. Proceso de CRM y QA"
+  },
+  {
+   "key": "zoho",
+   "en": "4. Zoho video track (4 weeks)",
+   "es": "4. Track de videos de Zoho (4 semanas)"
+  },
+  {
+   "key": "graduation",
+   "en": "5. Graduation",
+   "es": "5. Graduación"
+  }
+ ],
+ "modules": [
+  {
+   "slug": "welcome",
+   "phase": "orientation",
+   "category": "onboarding",
+   "minutes": 20,
+   "pass": 70,
+   "en": "Welcome to GSD 500 BPO",
+   "es": "Bienvenida a GSD 500 BPO",
+   "desc_en": "Who we are, what we sell, how the Academy works and the golden rules.",
+   "desc_es": "Quiénes somos, qué vendemos, cómo funciona la Academia y las reglas de oro."
+  },
+  {
+   "slug": "role-and-kpis",
+   "phase": "orientation",
+   "category": "onboarding",
+   "minutes": 30,
+   "pass": 75,
+   "en": "Your role, schedule & KPIs",
+   "es": "Tu rol, horario y KPIs",
+   "desc_en": "Daily schedule, duties, what makes an appointment count, weekly KPIs and the EOD report.",
+   "desc_es": "Horario diario, funciones, cuándo cuenta una cita, KPIs semanales y el reporte de fin de día."
+  },
+  {
+   "slug": "scrum-trello",
+   "phase": "orientation",
+   "category": "operations",
+   "minutes": 30,
+   "pass": 75,
+   "en": "SCRUM & the Trello board",
+   "es": "SCRUM y el tablero de Trello",
+   "desc_en": "Board flow, card template, honest stars, ceremonies, standup template and Definition of Done.",
+   "desc_es": "Flujo del tablero, plantilla de tarjeta, estrellas honestas, ceremonias, standup y Definition of Done."
+  },
+  {
+   "slug": "call-rules",
+   "phase": "calls",
+   "category": "compliance",
+   "minutes": 15,
+   "pass": 100,
+   "en": "Hard rules on every call",
+   "es": "Reglas de oro en cada llamada",
+   "desc_en": "The non-negotiables: lead source, STOP/DNC, no unproven numbers, recorded-line conduct, timing.",
+   "desc_es": "Lo no negociable: fuente del lead, STOP/no llamar, cero cifras sin prueba, conducta en línea grabada, horarios."
+  },
+  {
+   "slug": "call-opener",
+   "phase": "calls",
+   "category": "sales_techniques",
+   "minutes": 15,
+   "pass": 75,
+   "en": "Step 1: The opener",
+   "es": "Paso 1: La apertura",
+   "desc_en": "Get 30 seconds of permission, then ask one question.",
+   "desc_es": "Consigue 30 segundos de permiso y haz una sola pregunta."
+  },
+  {
+   "slug": "call-gatekeeper",
+   "phase": "calls",
+   "category": "sales_techniques",
+   "minutes": 15,
+   "pass": 75,
+   "en": "Step 2: Gatekeepers & call screeners",
+   "es": "Paso 2: Recepcionistas y filtros",
+   "desc_en": "One-line reasons, the three things to collect, and callbacks that name the agreement.",
+   "desc_es": "Motivo en una frase, las tres cosas que debes conseguir y devoluciones que nombran el acuerdo."
+  },
+  {
+   "slug": "call-discovery",
+   "phase": "calls",
+   "category": "sales_techniques",
+   "minutes": 15,
+   "pass": 75,
+   "en": "Step 3: Discovery questions",
+   "es": "Paso 3: Preguntas de diagnóstico",
+   "desc_en": "Ask 3 to 5 questions, then listen.",
+   "desc_es": "Haz de 3 a 5 preguntas y escucha."
+  },
+  {
+   "slug": "call-pitch",
+   "phase": "calls",
+   "category": "sales_techniques",
+   "minutes": 20,
+   "pass": 75,
+   "en": "Step 4: The value pitch",
+   "es": "Paso 4: La propuesta de valor",
+   "desc_en": "Match one or two GSD services to what you heard. Never recite the full list.",
+   "desc_es": "Conecta uno o dos servicios de GSD con lo que escuchaste. Nunca recites la lista completa."
+  },
+  {
+   "slug": "call-booking",
+   "phase": "calls",
+   "category": "sales_techniques",
+   "minutes": 20,
+   "pass": 80,
+   "en": "Step 5: Booking the appointment",
+   "es": "Paso 5: Agendar la cita",
+   "desc_en": "Two specific options, lock it in, confirm the email, channel and the day-before confirmation.",
+   "desc_es": "Dos opciones concretas, dejarla agendada, confirmar correo, canal y la confirmación del día anterior."
+  },
+  {
+   "slug": "call-objections",
+   "phase": "calls",
+   "category": "objection_handling",
+   "minutes": 30,
+   "pass": 80,
+   "en": "Step 6: Top objections",
+   "es": "Paso 6: Objeciones principales",
+   "desc_en": "The ten objections we hear most, in the prospect's words, with the answer that works.",
+   "desc_es": "Las diez objeciones más comunes, con las palabras del prospecto y la respuesta que funciona."
+  },
+  {
+   "slug": "call-voicemail",
+   "phase": "calls",
+   "category": "sales_techniques",
+   "minutes": 10,
+   "pass": 75,
+   "en": "Step 7: Voicemail",
+   "es": "Paso 7: Mensaje de voz",
+   "desc_en": "Under 45 seconds, personal hook, number twice.",
+   "desc_es": "Menos de 45 segundos, detalle personal y el número dos veces."
+  },
+  {
+   "slug": "call-sms",
+   "phase": "calls",
+   "category": "compliance",
+   "minutes": 10,
+   "pass": 80,
+   "en": "Step 8: SMS follow-up",
+   "es": "Paso 8: SMS de seguimiento",
+   "desc_en": "Approved templates from the registered texting line only, and STOP means stop.",
+   "desc_es": "Solo plantillas aprobadas desde la línea de texto registrada, y STOP significa parar."
+  },
+  {
+   "slug": "crm-process",
+   "phase": "crm_qa",
+   "category": "technology",
+   "minutes": 25,
+   "pass": 75,
+   "en": "CRM process & automation",
+   "es": "Proceso de CRM y automatización",
+   "desc_en": "Zoho hygiene, dedupe rules, opt-outs, template sets and the automation you act on.",
+   "desc_es": "Higiene de Zoho, reglas de duplicados, opt-outs, sets de plantillas y la automatización sobre la que actúas."
+  },
+  {
+   "slug": "qa-scorecard",
+   "phase": "crm_qa",
+   "category": "compliance",
+   "minutes": 25,
+   "pass": 80,
+   "en": "QA scorecard & pre-send checks",
+   "es": "Scorecard de QA y revisión antes de enviar",
+   "desc_en": "The 100-point call scorecard, Good/Bad/Ugly, critical fails and the 60-second pre-send checklists.",
+   "desc_es": "El scorecard de 100 puntos, Good/Bad/Ugly, fallas críticas y las checklists de 60 segundos antes de enviar."
+  },
+  {
+   "slug": "zoho-1-crm-basics",
+   "phase": "zoho",
+   "category": "zoho",
+   "minutes": 80,
+   "pass": 80,
+   "week": 1,
+   "en": "Zoho 1: CRM basics & navigation",
+   "es": "Zoho 1: Conceptos básicos y navegación del CRM",
+   "desc_en": "Week 1. The current CRM interface, how SMEs implement a CRM, and what's new.",
+   "desc_es": "Semana 1. La interfaz actual del CRM, cómo se implementa un CRM en una PYME y las novedades."
+  },
+  {
+   "slug": "zoho-2-records-pipelines",
+   "phase": "zoho",
+   "category": "zoho",
+   "minutes": 140,
+   "pass": 80,
+   "week": 1,
+   "en": "Zoho 2: Leads, Contacts, Deals & pipelines",
+   "es": "Zoho 2: Leads, Contacts, Deals y pipelines",
+   "desc_en": "Week 1. Layouts, sales pipelines, user views and lead scoring.",
+   "desc_es": "Semana 1. Layouts, pipelines de venta, vistas de usuario y lead scoring."
+  },
+  {
+   "slug": "zoho-3-activities",
+   "phase": "zoho",
+   "category": "zoho",
+   "minutes": 70,
+   "pass": 80,
+   "week": 2,
+   "en": "Zoho 3: Activities, calls & meetings",
+   "es": "Zoho 3: Actividades, llamadas y reuniones",
+   "desc_en": "Week 2. Logging calls, emails and meetings against leads.",
+   "desc_es": "Semana 2. Registrar llamadas, emails y reuniones en los leads."
+  },
+  {
+   "slug": "zoho-4-data-quality",
+   "phase": "zoho",
+   "category": "zoho",
+   "minutes": 110,
+   "pass": 80,
+   "week": 2,
+   "en": "Zoho 4: Views, tags, import, duplicates & reports",
+   "es": "Zoho 4: Vistas, etiquetas, importación, duplicados y reportes",
+   "desc_en": "Week 2. Clean data flow, imports, merging duplicates safely, list views, tags and dashboards.",
+   "desc_es": "Semana 2. Flujo de datos limpio, importación, fusión segura de duplicados, vistas, etiquetas y dashboards."
+  },
+  {
+   "slug": "zoho-5-automation",
+   "phase": "zoho",
+   "category": "zoho",
+   "minutes": 70,
+   "pass": 80,
+   "week": 3,
+   "en": "Zoho 5: Workflow rules, blueprints & cadences",
+   "es": "Zoho 5: Reglas de flujo, blueprints y cadencias",
+   "desc_en": "Week 3. Know what automation touches a record before you edit it.",
+   "desc_es": "Semana 3. Saber qué automatización toca un registro antes de editarlo."
+  },
+  {
+   "slug": "zoho-6-campaigns",
+   "phase": "zoho",
+   "category": "zoho",
+   "minutes": 90,
+   "pass": 80,
+   "week": 3,
+   "en": "Zoho 6: Campaigns & email marketing",
+   "es": "Zoho 6: Campaigns y email marketing",
+   "desc_en": "Week 3. CRM-to-Campaigns sync, lists, segments, analytics and the anti-spam policy.",
+   "desc_es": "Semana 3. Sincronización CRM-Campaigns, listas, segmentos, analítica y la política anti-spam."
+  },
+  {
+   "slug": "zoho-7-flow",
+   "phase": "zoho",
+   "category": "zoho",
+   "minutes": 75,
+   "pass": 80,
+   "week": 4,
+   "en": "Zoho 7: Zoho Flow",
+   "es": "Zoho 7: Zoho Flow",
+   "desc_en": "Week 4. Triggers, actions, run history and the Bookings-to-CRM flow.",
+   "desc_es": "Semana 4. Triggers, acciones, historial de ejecuciones y el flujo Bookings-CRM."
+  },
+  {
+   "slug": "zoho-8-bookings",
+   "phase": "zoho",
+   "category": "zoho",
+   "minutes": 45,
+   "pass": 80,
+   "week": 4,
+   "en": "Zoho 8: Bookings & SalesIQ",
+   "es": "Zoho 8: Bookings y SalesIQ",
+   "desc_en": "Week 4. Booking pages, the appointment dashboard and website chat (optional).",
+   "desc_es": "Semana 4. Páginas de reserva, el dashboard de citas y el chat del sitio (opcional)."
+  },
+  {
+   "slug": "graduation-333",
+   "phase": "graduation",
+   "category": "graduation",
+   "minutes": 90,
+   "pass": 85,
+   "en": "3-3-3 graduation program",
+   "es": "Programa de graduación 3-3-3",
+   "desc_en": "Phase 1: 3 calls WITH your manager. Phase 2: 3 OBSERVED calls. Phase 3: 3 calls ALONE. Then you graduate.",
+   "desc_es": "Fase 1: 3 llamadas CON tu manager. Fase 2: 3 llamadas OBSERVADAS. Fase 3: 3 llamadas SOLO. Después te gradúas."
+  }
+ ]
+}
