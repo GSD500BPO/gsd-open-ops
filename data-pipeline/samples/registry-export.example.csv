@@ -1,0 +1,8 @@
+Business Name,DBA,Address,City,State,Zip Code,Phone Number,Email Address,Website,License Type
+EXAMPLE WATER SOLUTIONS LLC,,100 Main St,AUSTIN,Texas,78701-1234,(555) 010-0001,INFO@EXAMPLE.COM,www.example.com/,Water Treatment Contractor
+Example Water Solutions,,100 Main Street,Austin,TX,78701,555.010.0001,,,Water Treatment Contractor
+Sample Plumbing & Drain Inc,,22 Oak Ave,Tampa,FL,33602,+1 555 010 0002 ext 4,owner@sample-plumbing.example,https://sample-plumbing.example,Plumbing Contractor
+Demo Heating and Air,,9 Pine Rd,Phoenix,Arizona,85001,5550100003,demo.hvac@example.net,,Mechanical - HVAC
+Servicios de Agua Ejemplo,,5 Elm St,Houston,TX,77002,555-010-0004,,https://www.facebook.com/example,Water Treatment Contractor
+No Contact Roofing,,1 Birch Ln,Denver,CO,80202,,,,Roofing Contractor
+Bad Data Co,,,,,,12345,not-an-email,,

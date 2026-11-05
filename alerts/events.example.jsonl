@@ -1,0 +1,10 @@
+{"id": "e1", "type": "new_lead", "lead_id": "L-100", "name": "Ana Example", "phone": "+15550000001", "email": "ana@example.com", "ts": "2026-03-02T15:00:00Z"}
+{"id": "e2", "type": "email_open", "lead_id": "L-100", "ts": "2026-03-02T15:20:00Z"}
+{"id": "e3", "type": "email_click", "lead_id": "L-100", "ts": "2026-03-02T15:21:00Z"}
+{"id": "e4", "type": "reply", "lead_id": "L-100", "text": "Yes, can you call me after 4?", "ts": "2026-03-02T16:00:00Z"}
+{"id": "e5", "type": "reply", "lead_id": "L-100", "text": "Also, do you work weekends?", "ts": "2026-03-02T16:05:00Z"}
+{"id": "e6", "type": "email_click", "lead_id": "L-100", "ts": "2026-03-02T16:06:00Z"}
+{"id": "e7", "type": "new_lead", "lead_id": "L-200", "name": "Ben Sample", "phone": "+15550000002", "ts": "2026-03-02T15:00:00Z"}
+{"id": "e8", "type": "reply", "lead_id": "L-200", "text": "STOP", "ts": "2026-03-02T15:30:00Z"}
+{"id": "e9", "type": "new_lead", "lead_id": "L-300", "name": "Cara Demo", "email": "cara@example.com", "ts": "2026-03-02T15:00:00Z"}
+{"id": "e1", "type": "new_lead", "lead_id": "L-100", "name": "Ana Example", "ts": "2026-03-02T15:00:00Z"}

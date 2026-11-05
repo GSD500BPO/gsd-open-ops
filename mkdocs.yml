@@ -21,6 +21,7 @@ plugins: [search]
 markdown_extensions: [tables, admonition, toc: {permalink: true}]
 nav:
   - Home: index.md
+  - Getting started: GETTING-STARTED.md
   - How we built it: how-we-built-it.md
   - Use cases:
       - Water-treatment dealer nurture: use-cases/water-treatment-dealer-nurture.md

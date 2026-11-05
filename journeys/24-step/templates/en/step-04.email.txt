@@ -1,0 +1,17 @@
+Subject: 3 questions before we talk
+
+Hi {{first_name|there}},
+
+Three quick questions, so I know if we can help:
+
+1. About how many new leads do you get in a month?
+2. How fast are they called today?
+3. What happens to the ones who do not book?
+
+Just reply with the numbers. Rough guesses are fine.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

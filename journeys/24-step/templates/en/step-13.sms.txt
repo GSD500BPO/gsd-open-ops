@@ -1,0 +1,1 @@
+{{first_name|Hi}}, {{sender_name}} here. Happy to show you a 3-week setup plan for {{company|your team}}. Want me to send it? Reply STOP to opt out.

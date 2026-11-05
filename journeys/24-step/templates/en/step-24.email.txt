@@ -1,0 +1,13 @@
+Subject: Door is always open
+
+Hi {{first_name|there}},
+
+This is my last email in this series. No pitch.
+
+If you ever want help with follow-up, appointment setting or your CRM, just reply to this email. I read every reply myself.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

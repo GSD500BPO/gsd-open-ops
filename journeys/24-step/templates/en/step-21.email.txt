@@ -1,0 +1,15 @@
+Subject: Common questions
+
+Hi {{first_name|there}},
+
+Questions we hear most often:
+
+"Do I need a new CRM?" No. We work inside the one you have.
+"Is there a long contract?" Ask us about our current terms on the call.
+"Who owns the leads?" You do. Always.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

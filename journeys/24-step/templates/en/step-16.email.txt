@@ -1,0 +1,18 @@
+Subject: What we measure every week
+
+Hi {{first_name|there}},
+
+Every week our clients get the same short report:
+
+- New leads and how fast they were called
+- Conversations and appointments set
+- Appointments kept
+- Leads waiting on a next step
+
+If a number goes the wrong way, we say so first.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

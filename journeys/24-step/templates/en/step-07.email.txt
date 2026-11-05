@@ -1,0 +1,15 @@
+Subject: One open task per lead
+
+Hi {{first_name|there}},
+
+Here is the simplest CRM rule we know: every lead always has exactly one open task.
+
+No task means the lead is forgotten. Two tasks means nobody knows which one is real.
+
+When a call ends, the next task is set before the rep hangs up. That one rule fixes most leaky pipelines.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

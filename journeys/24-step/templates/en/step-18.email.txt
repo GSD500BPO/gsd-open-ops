@@ -1,0 +1,15 @@
+Subject: The cost of a slow callback
+
+Hi {{first_name|there}},
+
+Think about your last 20 leads. How many were called back within an hour?
+
+Every slow callback is a lead you paid for and handed to whoever answered first.
+
+If you want to fix that this quarter, here is my calendar: {{booking_link}}
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

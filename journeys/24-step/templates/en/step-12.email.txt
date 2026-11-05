@@ -1,0 +1,13 @@
+Subject: A 15-minute review of your follow-up
+
+Hi {{first_name|there}},
+
+If it helps, I can spend 15 minutes looking at how {{company|your team}} follows up today and send you three specific ideas. No pitch unless you ask for one.
+
+Pick a time: {{booking_link}}
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

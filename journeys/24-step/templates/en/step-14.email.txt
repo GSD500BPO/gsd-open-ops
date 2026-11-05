@@ -1,0 +1,17 @@
+Subject: Where most leads leak
+
+Hi {{first_name|there}},
+
+In our experience, leads leak in three places:
+
+1. The first hour (nobody calls).
+2. The second week (nobody follows up).
+3. The "not now" pile (nobody ever calls again).
+
+Which one hurts {{company|your team}} most? Reply 1, 2 or 3.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

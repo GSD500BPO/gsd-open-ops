@@ -1,0 +1,34 @@
+{
+  "name": "generic",
+  "source": "csv-import",
+  "tag": "",
+  "fuzzy_name_threshold": 0.92,
+  "category_columns": ["category", "type", "naics description", "license type", "classification"],
+  "columns": {
+    "company": ["business name", "company name", "name", "legal name", "dba", "organization", "account name"],
+    "first_name": ["first", "owner first name", "contact first name"],
+    "last_name": ["last", "owner last name", "contact last name", "surname"],
+    "title": ["job title", "role", "position"],
+    "email": ["email address", "e-mail", "contact email", "business email"],
+    "phone": ["phone number", "telephone", "business phone", "main phone", "mobile", "tel"],
+    "website": ["website url", "url", "web", "site", "homepage"],
+    "street": ["address", "street address", "address 1", "address line 1", "mailing address"],
+    "city": ["town", "locality"],
+    "state": ["st", "state/region", "province", "region"],
+    "zip": ["zip code", "postal code", "postcode", "zipcode"],
+    "country": ["country/region"],
+    "industry": ["trade", "vertical"],
+    "language": ["preferred language", "lang"],
+    "source_url": ["source link", "page url", "link"],
+    "notes": ["note", "comments", "description"]
+  },
+  "industry_keywords": {
+    "Water Treatment": ["water treatment", "water softener", "softener", "reverse osmosis", "water filtration", "water purification", "well water", "agua"],
+    "HVAC": ["hvac", "heating", "air conditioning", "cooling", "furnace", "heat pump"],
+    "Plumbing": ["plumbing", "plumber", "plomeria", "plomería", "drain", "water heater"],
+    "Roofing": ["roofing", "roofer", "roof", "techos", "storm restoration"],
+    "Solar": ["solar", "photovoltaic"],
+    "Windows & Doors": ["windows", "window", "doors"],
+    "Pest Control": ["pest", "termite", "exterminator"]
+  }
+}

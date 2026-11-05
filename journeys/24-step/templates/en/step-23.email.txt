@@ -1,0 +1,13 @@
+Subject: Last idea for now
+
+Hi {{first_name|there}},
+
+One last idea, free: tonight, look at every lead from last month that has no open task. Give each one a next step with a date.
+
+That one list is usually the fastest money in a {{trade}} business.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

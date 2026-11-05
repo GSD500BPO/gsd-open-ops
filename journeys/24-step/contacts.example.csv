@@ -1,0 +1,5 @@
+id,first_name,last_name,company,email,phone,city,state,language,sms_consent,do_not_contact
+c-001,Ana,Example,Example Water Co,ana@example.com,+15550000001,Austin,TX,en,yes,no
+c-002,Ben,Sample,Sample Plumbing,ben@example.com,+15550000002,Tampa,FL,en,no,no
+c-003,,,Demo HVAC,office@example.com,,Phoenix,AZ,en,no,no
+c-004,Dana,Test,Test Roofing,dana@example.com,+15550000004,Denver,CO,en,yes,yes

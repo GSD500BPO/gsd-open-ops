@@ -1,0 +1,21 @@
+{
+  "name": "openstreetmap",
+  "source": "openstreetmap",
+  "tag": "osm",
+  "fuzzy_name_threshold": 0.92,
+  "category_columns": ["category"],
+  "columns": {
+    "company": ["name"],
+    "email": ["contact:email"],
+    "phone": ["contact:phone"],
+    "website": ["contact:website"],
+    "source_url": ["osm_url"]
+  },
+  "industry_keywords": {
+    "Water Treatment": ["water treatment", "water softener", "water_treatment", "water filtration"],
+    "HVAC": ["hvac", "craft=hvac", "heating", "air conditioning"],
+    "Plumbing": ["plumber", "craft=plumber", "plumbing"],
+    "Roofing": ["roofer", "craft=roofer", "roofing"],
+    "Solar": ["solar", "craft=photovoltaic"]
+  }
+}

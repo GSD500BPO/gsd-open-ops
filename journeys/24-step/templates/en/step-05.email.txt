@@ -1,0 +1,18 @@
+Subject: What a booked calendar needs
+
+Hi {{first_name|there}},
+
+A full calendar is not luck. It is usually four simple habits:
+
+- Every lead is called within minutes.
+- Every lead has one next task with a date.
+- Nobody sits on a lead for days.
+- Leads who say "not now" get a plan, not silence.
+
+We build those habits into your CRM and staff the calls. More here: {{sender_website}}
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

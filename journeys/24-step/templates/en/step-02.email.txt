@@ -1,0 +1,15 @@
+Subject: The lead that did not buy today
+
+Hi {{first_name|there}},
+
+Most leads do not say yes on the first call. They say "not now."
+
+The businesses that win are the ones that are still there, politely, when "not now" turns into "now."
+
+That is all a nurture journey is: the right message, at the right time, until the person is ready or asks you to stop.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

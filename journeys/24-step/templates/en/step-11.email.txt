@@ -1,0 +1,17 @@
+Subject: What we do not automate
+
+Hi {{first_name|there}},
+
+Some things should always be a human:
+
+- Any reply from a lead goes to a person, not a bot.
+- Anyone who says STOP is never contacted again.
+- Nobody gets the same message twice.
+
+Automation should make you faster, not louder.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

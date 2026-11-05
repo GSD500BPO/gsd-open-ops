@@ -1,0 +1,3 @@
+company,first_name,last_name,title,email,phone,website,street,city,state,zip,country,industry,language,source,source_url,collected_on,notes,sms_consent
+Example Water Solutions,Ana,Example,Owner,ana@example.com,(555) 010-0001,example.com,,Austin,TX,,US,,en,manual-research,https://example.com/contact,2026-03-02,Found on their own contact page,no
+Brand New Softeners,Ben,Sample,Manager,ben@brandnew.example,555 010 0005,brandnew.example,,San Antonio,TX,,US,Water Treatment,es,manual-research,https://brandnew.example,2026-03-02,Spanish-language website,no

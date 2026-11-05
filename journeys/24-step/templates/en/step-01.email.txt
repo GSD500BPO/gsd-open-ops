@@ -1,0 +1,15 @@
+Subject: Quick question about {{company|your team}}
+
+Hi {{first_name|there}},
+
+How does {{company|your team}} follow up today with people who asked about your services but did not buy?
+
+We help {{trade}} businesses with {{offer_short}}, so every lead gets a fast, friendly follow-up.
+
+Is that a problem worth 15 minutes this month? Pick a time here: {{booking_link}}
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

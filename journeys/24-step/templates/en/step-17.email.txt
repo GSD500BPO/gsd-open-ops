@@ -1,0 +1,13 @@
+Subject: A question about {{city|your area}}
+
+Hi {{first_name|there}},
+
+Is {{city|your area}} busier for you in some seasons than others?
+
+Many {{trade}} businesses slow down in one season and get buried in another. A follow-up journey keeps the slow months warm, so the busy months start with a full calendar.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

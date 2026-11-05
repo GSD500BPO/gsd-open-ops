@@ -1,0 +1,13 @@
+Subject: Closing the loop
+
+Hi {{first_name|there}},
+
+I do not want to fill your inbox. I will send two more notes and then stop.
+
+If follow-up is a priority for {{company|your team}} this year, let's talk: {{booking_link}}
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

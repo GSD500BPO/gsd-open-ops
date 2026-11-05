@@ -1,0 +1,13 @@
+Subject: Is now a bad time?
+
+Hi {{first_name|there}},
+
+It may just be the wrong time for {{company|your team}}. That is fine.
+
+Reply "later" and I will check back in a few months. Reply "no" and I will close your file.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

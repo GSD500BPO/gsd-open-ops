@@ -1,0 +1,17 @@
+Subject: How a typical setup works
+
+Hi {{first_name|there}},
+
+Here is what a typical setup with {{sender_company}} looks like:
+
+Week 1: we map your lead sources and your CRM fields.
+Week 2: we turn on speed-to-lead alerts and the follow-up journey, in test mode first.
+Week 3: our setters start calling, using your script.
+
+You can stop any time.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

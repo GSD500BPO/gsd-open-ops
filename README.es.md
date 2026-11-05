@@ -15,6 +15,10 @@
 | [`recruiting/`](recruiting/) | **Ramón**, el bot de reclutamiento por WhatsApp: registro → pasos por WhatsApp → video de 1 minuto en inglés → puntaje de speaking local (claridad, fluidez, gramática, acento) → prueba de inglés, ventas y mecanografía → roleplay de voz → filtro aprobado/no aprobado → tarea de entrevista |
 | [`training/`](training/) | La **academia de setters**: 23 módulos en EN y ES (archivos `*.es.md`), quizzes, graduación 3-3-3, plantillas de SOP y el mapa de roles |
 | [`crm/`](crm/) | Reglas del equipo: speed to lead (15 min), una tarea abierta siempre, regla de 3 días vencidos, intentos TA-1..4, seguimientos FU-1..6 |
+| [`journeys/24-step/`](journeys/24-step/) | **Motor de nutrición de 24 pasos**: 24 correos + 6 SMS en 90 días, con el código que los envía de forma segura (simulación por defecto, un mensaje por canal por paso, límites diarios, STOP para siempre, cortacircuitos, interruptor de apagado). Documentación en inglés |
+| [`alerts/`](alerts/) | **Alertas de velocidad al lead y leads calientes**: lead nuevo / respuesta → chat del equipo + tarea en el CRM; apertura +5, clic +10, respuesta +25 → caliente a 70, crítico a 90; escalamiento si nadie llama en 15 minutos |
+| [`data-pipeline/`](data-pipeline/) | **Pipeline de listas**: datos que se pueden usar (tu CRM, datos abiertos, OpenStreetMap, investigación manual) → limpiar → deduplicar → enriquecer → archivos de importación para Zoho CRM, GoHighLevel y HubSpot. Sin scrapers para sitios que lo prohíben |
+| [`safety/`](safety/) | **El guardián de envíos** que usan todos los envíos, el notificador al chat del equipo y la lista de 15 chequeos antes de salir en vivo |
 | [`playbooks/`](playbooks/) | El **recorrido de 96 pasos para todo el año**: qué hacer con cada lead que no compró (PDF + CSV + JSON) |
 | [`USE-CASES.md`](USE-CASES.md) | 8 casos de uso paso a paso |
 

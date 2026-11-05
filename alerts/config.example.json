@@ -1,0 +1,19 @@
+{
+  "sender_id": "alerts",
+  "state_dir": "state",
+
+  "points": {"email_open": 5, "email_click": 10, "reply": 25},
+  "max_open_points": 20,
+  "hot_threshold": 70,
+  "critical_threshold": 90,
+
+  "speed_to_lead_minutes": 15,
+
+  "max_alerts_per_run": 20,
+  "max_alerts_per_lead_per_day": 5,
+  "circuit_breaker_failures": 2,
+
+  "crm": {"type": "dryrun"},
+  "crm_link": "https://example.com/crm/leads/{lead_id}",
+  "field_map": {}
+}

@@ -1,0 +1,13 @@
+Subject: Should I keep sending these?
+
+Hi {{first_name|there}},
+
+I have sent you a few notes about follow-up for {{company|your team}}.
+
+If this is useful, I will keep sending one short idea every few days. If it is not, just click unsubscribe below and I will stop right away. No hard feelings.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

@@ -1,0 +1,15 @@
+Subject: Speak your customer's language
+
+Hi {{first_name|there}},
+
+In many US markets, a large share of homeowners prefer Spanish on the phone.
+
+When the person who calls them speaks their language, the conversation is easier and the appointment is more likely to happen.
+
+We staff bilingual setters (English and Spanish) for that reason.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

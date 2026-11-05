@@ -1,0 +1,13 @@
+Subject: A simple next step
+
+Hi {{first_name|there}},
+
+If you want to see whether we are a fit, the next step is a 15-minute call. I will ask about your leads, your CRM and your team, and tell you honestly if we can help.
+
+{{booking_link}}
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

@@ -1,0 +1,277 @@
+{
+  "name": "24-step B2B nurture",
+  "version": 1,
+  "language": "en",
+  "description": "24 steps over 90 days in 4 phases (introduce, educate, prove, decide). Email every step, a text on 6 steps for contacts with SMS consent.",
+  "min_hours_between_steps": 20,
+  "stop_rules": {
+    "reply": "pause_and_hand_to_human",
+    "stop_word": "suppress_forever",
+    "unsubscribe": "suppress_forever",
+    "hard_bounce": "suppress_channel",
+    "booked": "exit_won",
+    "do_not_contact_field": "never_enroll"
+  },
+  "channel_rules": {
+    "email": {
+      "requires": [
+        "email"
+      ]
+    },
+    "sms": {
+      "requires": [
+        "phone",
+        "sms_consent"
+      ],
+      "only_if_engaged": false
+    }
+  },
+  "steps": [
+    {
+      "id": "step-01",
+      "phase": "introduce",
+      "day": 0,
+      "channels": [
+        "email",
+        "sms"
+      ],
+      "template": "step-01",
+      "goal": "Open a conversation"
+    },
+    {
+      "id": "step-02",
+      "phase": "introduce",
+      "day": 2,
+      "channels": [
+        "email"
+      ],
+      "template": "step-02",
+      "goal": "Name the problem"
+    },
+    {
+      "id": "step-03",
+      "phase": "introduce",
+      "day": 4,
+      "channels": [
+        "email"
+      ],
+      "template": "step-03",
+      "goal": "Speed to lead"
+    },
+    {
+      "id": "step-04",
+      "phase": "introduce",
+      "day": 7,
+      "channels": [
+        "email",
+        "sms"
+      ],
+      "template": "step-04",
+      "goal": "Qualify"
+    },
+    {
+      "id": "step-05",
+      "phase": "introduce",
+      "day": 9,
+      "channels": [
+        "email"
+      ],
+      "template": "step-05",
+      "goal": "Show the system"
+    },
+    {
+      "id": "step-06",
+      "phase": "introduce",
+      "day": 11,
+      "channels": [
+        "email"
+      ],
+      "template": "step-06",
+      "goal": "Permission check"
+    },
+    {
+      "id": "step-07",
+      "phase": "educate",
+      "day": 14,
+      "channels": [
+        "email"
+      ],
+      "template": "step-07",
+      "goal": "Teach a rule"
+    },
+    {
+      "id": "step-08",
+      "phase": "educate",
+      "day": 17,
+      "channels": [
+        "email",
+        "sms"
+      ],
+      "template": "step-08",
+      "goal": "Teach a rule"
+    },
+    {
+      "id": "step-09",
+      "phase": "educate",
+      "day": 20,
+      "channels": [
+        "email"
+      ],
+      "template": "step-09",
+      "goal": "Bilingual angle"
+    },
+    {
+      "id": "step-10",
+      "phase": "educate",
+      "day": 23,
+      "channels": [
+        "email"
+      ],
+      "template": "step-10",
+      "goal": "CRM fields"
+    },
+    {
+      "id": "step-11",
+      "phase": "educate",
+      "day": 26,
+      "channels": [
+        "email"
+      ],
+      "template": "step-11",
+      "goal": "Trust"
+    },
+    {
+      "id": "step-12",
+      "phase": "educate",
+      "day": 29,
+      "channels": [
+        "email"
+      ],
+      "template": "step-12",
+      "goal": "Soft ask"
+    },
+    {
+      "id": "step-13",
+      "phase": "prove",
+      "day": 33,
+      "channels": [
+        "email",
+        "sms"
+      ],
+      "template": "step-13",
+      "goal": "Process"
+    },
+    {
+      "id": "step-14",
+      "phase": "prove",
+      "day": 37,
+      "channels": [
+        "email"
+      ],
+      "template": "step-14",
+      "goal": "Diagnose"
+    },
+    {
+      "id": "step-15",
+      "phase": "prove",
+      "day": 41,
+      "channels": [
+        "email"
+      ],
+      "template": "step-15",
+      "goal": "Quality"
+    },
+    {
+      "id": "step-16",
+      "phase": "prove",
+      "day": 45,
+      "channels": [
+        "email"
+      ],
+      "template": "step-16",
+      "goal": "Reporting"
+    },
+    {
+      "id": "step-17",
+      "phase": "prove",
+      "day": 49,
+      "channels": [
+        "email"
+      ],
+      "template": "step-17",
+      "goal": "Local angle"
+    },
+    {
+      "id": "step-18",
+      "phase": "prove",
+      "day": 53,
+      "channels": [
+        "email"
+      ],
+      "template": "step-18",
+      "goal": "Urgency"
+    },
+    {
+      "id": "step-19",
+      "phase": "decide",
+      "day": 58,
+      "channels": [
+        "email",
+        "sms"
+      ],
+      "template": "step-19",
+      "goal": "Timing check"
+    },
+    {
+      "id": "step-20",
+      "phase": "decide",
+      "day": 63,
+      "channels": [
+        "email"
+      ],
+      "template": "step-20",
+      "goal": "Ask"
+    },
+    {
+      "id": "step-21",
+      "phase": "decide",
+      "day": 68,
+      "channels": [
+        "email"
+      ],
+      "template": "step-21",
+      "goal": "Objections"
+    },
+    {
+      "id": "step-22",
+      "phase": "decide",
+      "day": 75,
+      "channels": [
+        "email"
+      ],
+      "template": "step-22",
+      "goal": "Breakup prep"
+    },
+    {
+      "id": "step-23",
+      "phase": "decide",
+      "day": 82,
+      "channels": [
+        "email",
+        "sms"
+      ],
+      "template": "step-23",
+      "goal": "Final value"
+    },
+    {
+      "id": "step-24",
+      "phase": "decide",
+      "day": 90,
+      "channels": [
+        "email"
+      ],
+      "template": "step-24",
+      "goal": "Goodbye"
+    }
+  ]
+}

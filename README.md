@@ -39,8 +39,12 @@ GSD Open Ops is the complete playbook and code behind a working appointment-sett
 | [`recruiting/`](recruiting/) | **Ramón**, the WhatsApp recruiting bot: intake → WhatsApp steps → 1-minute English video → local speaking score (clarity, fluency, grammar, accent) → English / Sales / Typing prequal test → voice roleplay → pass/fail gate → interview task. Dry by default, capped, consent-first | [`recruiting/README.md`](recruiting/README.md) |
 | [`training/`](training/) | The **appointment-setter academy**: 23 modules × EN/ES (~17.5 hours), quizzes with explanations, the 3-3-3 graduation, SOP templates and the role map ("who's what and who's where") | [`training/README.md`](training/README.md) |
 | [`crm/`](crm/) | **CRM rules and sales cadences**: speed to lead (15 min), one open task, 3-day overdue rule, TA-1..4 first-contact attempts, FU-1..6 post-appointment follow-up, recruiting data schema | [`crm/README.md`](crm/README.md) |
+| [`journeys/24-step/`](journeys/24-step/) | **24-step nurture engine**: 24 emails + 6 texts over 90 days, editable plain-text templates, and the runner that sends them safely (dry run by default, one message per channel per step, daily caps, STOP forever, circuit breaker, kill switch) | [`journeys/24-step/README.md`](journeys/24-step/README.md) |
+| [`alerts/`](alerts/) | **Speed-to-lead and hot-lead alerts**: new lead / reply → team chat + CRM task with a deadline; open +5, click +10, reply +25 → Hot at 70, Critical at 90; escalation when nobody calls in 15 minutes | [`alerts/README.md`](alerts/README.md) |
+| [`data-pipeline/`](data-pipeline/) | **List pipeline**: business data you're allowed to use (your CRM, open data, OpenStreetMap, manual research) → clean → dedupe → enrich → import files for Zoho CRM, GoHighLevel and HubSpot. No scrapers for sites that forbid them | [`data-pipeline/README.md`](data-pipeline/README.md) |
+| [`safety/`](safety/) | **The shared outbound guard** every sender uses, the team-chat notifier, and the 15-check going-live list | [`safety/README.md`](safety/README.md) |
 | [`playbooks/`](playbooks/) | The **96-Step Year-Round Prospect Journey**: what to do with every lead that didn't buy (PDF + importable CSV + JSON with merge fields and exit rules) | [`playbooks/README.md`](playbooks/README.md) |
-| [`docs/`](docs/) | The build story, use cases, GitHub/SEO settings | [`docs/how-we-built-it.md`](docs/how-we-built-it.md) |
+| [`docs/`](docs/) | **Getting started (non-technical)**, the build story, use cases, GitHub/SEO settings | [`docs/GETTING-STARTED.md`](docs/GETTING-STARTED.md) |
 | [`USE-CASES.md`](USE-CASES.md) | 8 step-by-step use cases: dealer nurture, storm-season pivot, 100 applicants → top 10, speed-to-lead routing, door-to-door data, a setter trained in a week, CRM-agnostic setup, B2B outreach | [`USE-CASES.md`](USE-CASES.md) |
 
 ## Quick start
@@ -54,18 +58,30 @@ cd recruiting/ramon
 cp .env.example .env && chmod 600 .env
 python3 tests/test_offline.py          # prints "OK 10 checks"
 
-# 2) The journey: open the steps in any spreadsheet or import them into your CRM
+# 2) The 24-step journey engine: dry run, prints what it WOULD send
+cd ../../journeys/24-step
+python3 engine.py enroll contacts.example.csv && python3 engine.py run --ignore-window
+
+# 3) Alerts and the list pipeline: dry run on the example files
+cd ../../alerts && python3 alerts.py process events.example.jsonl --now 2026-03-02T16:10:00Z
+cd ../data-pipeline && python3 pipeline.py run samples/registry-export.example.csv && cat out/report.md
+cd ..
+
+# 4) The 96-step plan: open the steps in any spreadsheet or import them into your CRM
 #    playbooks/96-step-journey/96-step-journey.csv
 
-# 3) The academy: read it on GitHub, or paste it into Zoho Learn / any LMS
+# 5) The academy: read it on GitHub, or paste it into Zoho Learn / any LMS
 #    training/curriculum/welcome.md  →  ...  →  graduation-333.md
 ```
+
+New here and not technical? Follow **[docs/GETTING-STARTED.md](docs/GETTING-STARTED.md)**, step by step.
 
 Then, in order:
 1. **Hire with Ramón.** Follow the go-live steps in [`recruiting/README.md`](recruiting/README.md) (`TALENT_LIVE=0` for a day, then your own phone only, then everyone).
 2. **Train with the academy.** One course per phase, one lesson per module; graduate people with 3-3-3.
 3. **Run the floor with the CRM rules.** Turn [`crm/ownership-rules.md`](crm/ownership-rules.md) and [`crm/cadences.md`](crm/cadences.md) into tasks, stages and workflow rules.
-4. **Never waste a lead.** Build the journey's exit rules first, then import the 96 steps.
+4. **Build a clean list** with the [list pipeline](data-pipeline/) and **wire alerts** ([`alerts/`](alerts/)) so every new lead and reply reaches a human fast.
+5. **Never waste a lead.** Run the [24-step engine](journeys/24-step/) (or import the 96 steps into your CRM) only after the [15-check going-live list](safety/README.md#going-live-checklist-15-checks).
 
 Search the repo for `{{` and `example.com` to find every value you need to fill in.
 
@@ -74,9 +90,9 @@ Search the repo for `{{` and `example.com` to find every value you need to fill 
 GSD 500 BPO started as one person, a CRM and a lot of leads nobody was calling back. Instead of hiring a department for each job, we wrote the departments ourselves, from scratch, with Claude as the engineering partner and a small crew of bots doing the repetitive work:
 
 1. **Cadences first.** Before any automation: written rules for how fast a lead is called, how many attempts, when the next task is due. The [3-day / 5-business-day cadence](crm/cadences.md) and the [ownership rules](crm/ownership-rules.md) came out of reviewing real calls.
-2. **Niche data.** Lists of water-treatment businesses built from public business data (search results, maps listings, public directories), respecting each site's terms and robots rules, then cleaned into the CRM with the fields that drive automation.
-3. **Journeys.** A 24-step nurture per trade, then four of them chained into the [96-step year-round journey](playbooks/96-step-journey/) that pivots from water treatment to roofing/storm, windows and HVAC as the seasons change.
-4. **Alerts.** Speed-to-lead: a new lead triggers a same-minute email + text and an alert to the person who must call it. Replies, opens and clicks raise a lead score; hot leads go to a human.
+2. **Niche data.** Lists of water-treatment businesses built from data we're allowed to use (our own CRM, open data, OpenStreetMap, and manual research where a site doesn't allow automation), then [cleaned, de-duplicated and enriched](data-pipeline/) into the CRM with the fields that drive automation.
+3. **Journeys.** A [24-step nurture](journeys/24-step/) per trade, then four of them chained into the [96-step year-round journey](playbooks/96-step-journey/) that pivots from water treatment to roofing/storm, windows and HVAC as the seasons change.
+4. **Alerts.** Speed-to-lead: a new lead triggers a same-minute email + text and an [alert](alerts/) to the person who must call it. Replies, opens and clicks raise a lead score; hot leads go to a human.
 5. **Smart leads to setters.** Fields like language, owner/renter and preferred channel decide who calls and what they say. Leads rotate; a 15-minute rule and a 3-day overdue rule keep anyone from sitting on them.
 6. **Recruiting at scale.** [Ramón](recruiting/) screens every applicant on WhatsApp, scores a 1-minute English video on our own server, and grades a prequal test, so a pile of applications becomes a short list of people worth interviewing.
 7. **Training.** The [academy](training/) turned everything above into 23 bilingual modules with quizzes and a 3-3-3 graduation.

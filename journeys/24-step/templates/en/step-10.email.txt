@@ -1,0 +1,18 @@
+Subject: Fields that make follow-up smart
+
+Hi {{first_name|there}},
+
+Good follow-up depends on a few fields in your CRM:
+
+- Preferred language
+- Preferred channel (call, text, email)
+- Best time to call
+- Business type or need
+
+Fill them during the first call, and every later message gets smarter.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

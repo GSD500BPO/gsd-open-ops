@@ -2,6 +2,7 @@
 
 | Doc | What |
 |---|---|
+| [`GETTING-STARTED.md`](GETTING-STARTED.md) | **Start here.** A non-technical, step-by-step path: which folder first, what to configure, how to test in dry run, how to go live safely |
 | [`how-we-built-it.md`](how-we-built-it.md) | How one founder built a BPO's operating system with Claude, chapter by chapter |
 | [`../USE-CASES.md`](../USE-CASES.md) → [`use-cases/`](use-cases/) | 8 step-by-step use cases |
 | [`GITHUB-SETTINGS.md`](GITHUB-SETTINGS.md) | Repo description, topics, social preview, launch checklist |

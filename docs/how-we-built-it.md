@@ -21,18 +21,20 @@ Those rules are [`crm/ownership-rules.md`](../crm/ownership-rules.md) and [`crm/
 
 ## Chapter 2. Data for a niche
 
-A BPO that sells to water-treatment dealers needs to know who the dealers are. We built our own lists from **public business data**: search results, map listings and public directories, collected with a small scraper bot, de-duplicated and loaded into a database, then into the CRM. Two rules we kept:
+A BPO that sells to water-treatment dealers needs to know who the dealers are. We built our own lists from **business data we're allowed to use**: our own CRM, open data, map data, and a lot of manual research, de-duplicated and loaded into a database, then into the CRM. Two rules we kept:
 
 - **Respect the source.** Follow each site's terms of service and robots rules, keep request rates low, collect business information only (no personal data from private profiles), and honor opt-outs.
 - **Fields over volume.** A record is only useful once the fields that drive automation are set: business type, language, preferred channel, and for homeowners, owner or renter. [`crm/cadences.md`](../crm/cadences.md#fields-that-drive-automation) lists them.
 
-The scraper itself is not in this repo (it's tied to specific sources and their terms). The field model and the import rules are.
+The **[list pipeline](../data-pipeline/)** is in this repo: clean, dedupe, enrich and export to Zoho CRM, GoHighLevel and HubSpot import files. It ships an OpenStreetMap pull (open data, allowed within its usage policy) and a manual-research template. It deliberately ships **no scraper** for sites whose terms forbid one, such as ad libraries and classifieds; for those we research by hand. [Which sources, and how](../data-pipeline/SOURCES.md).
 
 ## Chapter 3. Journeys: 24 steps, then 96
 
 Most leads don't buy on the first visit. So we wrote a **24-step nurture** per trade, bilingual, for homeowners and renters: education first, then money, then a final push. Our setters fill the lead fields that make it work ([video: lead fields that power a 24-step nurture](https://www.youtube.com/watch?v=OEOLl2DHYuY)).
 
 Then we noticed the same homeowner who doesn't need a water system this month will need a roof after a storm, windows before winter, or AC before summer. Four 24-step journeys chained by season became the **[96-Step Year-Round Prospect Journey](../playbooks/96-step-journey/)**: 4 phases × 3 chapters × 8 steps, with merge fields, a 6-step negotiation series before it, and exit rules. Video: [The 96-Step CRM Journey That Sells All Year](https://www.youtube.com/watch?v=fA0oPEkFEo4).
+
+The engine that runs a 24-step journey safely is in **[`journeys/24-step/`](../journeys/24-step/)**: a JSON journey definition, plain-text templates, and a runner that is dry by default and can't send the same message twice.
 
 **What Claude did here:** drafted step themes and angles per chapter, kept 96 steps consistent (IDs, tags, day offsets), and generated the PDF, CSV and JSON from one source so they never drift.
 
@@ -44,7 +46,7 @@ A cadence written on paper still loses to a lead that sits overnight. The alert 
 - **Alert to a human:** the person who must call gets pinged with a deadline (our dealer-side alert says *call within 1 hour*; our own setters work to the 15-minute rule).
 - **Lead scoring:** opens, clicks and especially replies raise a score (we weight a reply far above an open); hot leads go to a human instead of waiting for the next automated step.
 
-The rules are in [`crm/`](../crm/); the guardrails are in [`training/sop-templates/approval-gate.md`](../training/sop-templates/approval-gate.md).
+The rules are in [`crm/`](../crm/); the guardrails are in [`training/sop-templates/approval-gate.md`](../training/sop-templates/approval-gate.md). The code is in **[`alerts/`](../alerts/)**: new lead and reply alerts to team chat, CRM tasks with a deadline, the score (open +5, click +10, reply +25; Hot at 70, Critical at 90) and a speed-to-lead escalation.
 
 ## Chapter 5. Smart leads to setters
 
@@ -75,7 +77,9 @@ Building alone with automation means your mistakes also run automatically. Two t
 - **An automated follow-up re-sent the same first-day email again and again to a couple of leads.** Each step sent an email and then a text; the text provider failed, the step never advanced, and the scheduler retried the whole step every few minutes, email included. Now every sender records "sent" per channel *before* moving on, never repeats a channel already marked sent, caps messages per recipient per day in code, stops a lead after repeated failures and alerts a human, and has a kill switch. We also test the failure path (provider down, out of credits, rate-limited) before going live. Ramón has these rails (`outbound_guard.py`, state saved before each send).
 - **A text went to a list that included someone who had replied STOP before.** Now STOP is permanent per channel, checked before every send, and bulk sends need an explicit "go" on the final list.
 
-These rails are not optional in the code, and [CONTRIBUTING.md](../CONTRIBUTING.md) says PRs that weaken them won't be merged.
+These rails live in one shared module, **[`safety/`](../safety/)**, used by every sender, with offline tests that prove a failing text never re-sends the email, STOP stops everything, and caps hold. The [15-check going-live list](../safety/README.md#going-live-checklist-15-checks) came out of the same night. These rails are not optional in the code, and [CONTRIBUTING.md](../CONTRIBUTING.md) says PRs that weaken them won't be merged.
+
+New to all this? Start with **[GETTING-STARTED.md](GETTING-STARTED.md)**.
 
 ---
 

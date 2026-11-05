@@ -1,0 +1,1 @@
+{{first_name|Hi}}, quick one: how many new leads does {{company|your team}} get per month? Rough guess is fine. Reply STOP to opt out.

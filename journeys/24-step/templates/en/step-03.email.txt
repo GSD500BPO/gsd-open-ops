@@ -1,0 +1,19 @@
+Subject: Who calls back your new leads?
+
+Hi {{first_name|there}},
+
+When a new lead comes in at 7 pm on a Friday, who calls them back?
+
+The first business to answer usually gets the appointment. That is why we set up three things for our clients:
+
+1. An instant email and text when the lead arrives.
+2. An alert to the person who must call, with a deadline.
+3. A follow-up plan for everyone who does not answer.
+
+Want to see how that would look for {{company|your team}}? {{booking_link}}
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

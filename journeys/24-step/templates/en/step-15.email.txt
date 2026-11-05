@@ -1,0 +1,13 @@
+Subject: Call quality, not just call volume
+
+Hi {{first_name|there}},
+
+More calls do not help if the calls are bad.
+
+We score calls against your script with a simple scorecard: opener, questions, booking, next step. Reps see their score and get better every week.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}

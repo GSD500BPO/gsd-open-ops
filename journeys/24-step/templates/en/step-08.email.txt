@@ -1,0 +1,15 @@
+Subject: The 3-day / 5-day follow-up rule
+
+Hi {{first_name|there}},
+
+After a real conversation, the next follow-up is due in 3 days. With no conversation, in 5 business days.
+
+It is simple enough that every rep remembers it, and strict enough that no lead goes cold.
+
+Want the full cadence we use? Reply "cadence" and I will send it.
+
+{{sender_name}}
+{{sender_company}} | {{sender_website}}
+
+{{physical_address}}
+Not interested? Unsubscribe here and you will not hear from us again: {{unsubscribe_link}}
