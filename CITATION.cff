@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use or adapt this kit, please cite it as below."
+title: "GSD Open Ops: open-source appointment-setting and BPO operations kit"
+type: software
+authors:
+  - name: "GSD 500 BPO"
+    website: "https://gsd500bpo.com"
+    email: "security@gsd500bpo.com"
+repository-code: "https://github.com/GSD500BPO/gsd-open-ops"
+url: "https://gsd500bpo.com"
+license: MIT
+version: "1.0.0"
+date-released: "2026-11-04"
+abstract: >-
+  A WhatsApp recruiting bot with local speech scoring, a 23-module bilingual
+  appointment-setter academy, sales cadence templates, CRM ownership rules and a
+  96-step year-round prospect journey for home-service businesses.
+keywords:
+  - appointment setting
+  - BPO
+  - sales cadence
+  - lead nurturing
+  - CRM
+  - recruiting
+  - WhatsApp bot
+  - speech scoring
+  - home services

@@ -1,6 +1,8 @@
-# Recruiting: Ramón, the WhatsApp recruiting bot
+# Recruiting: Ramón, the WhatsApp recruiting bot with automated candidate scoring
 
-Ramón screens call-center candidates (SDR/BDR, appointment setters) end to end, so your recruiters only talk to people who already proved they can speak English on the phone.
+Ramón screens call-center candidates (SDR/BDR, appointment setters) end to end, so your recruiters only talk to people who already proved they can speak English on the phone. It's how a large pile of applications becomes a short list worth interviewing: every applicant gets the same steps, the same test and the same scoring, and nobody on your team spends time on the ones who never send the video or fail the English bar.
+
+**Use case:** [100 applicants → a top 10 to interview](../docs/use-cases/recruiting-100-to-top-10.md)
 
 ```
 Meta ad / lead form / apply page
@@ -93,3 +95,16 @@ Supabase: a **private** bucket for raw videos/CVs (`TALENT_VIDEO_BUCKET`), and p
 - **Consent before public.** Nobody appears on a public page until they reply YES. Public URLs use a salted hash (`TALENT_REEL_SALT`), never the phone number.
 - **Clients never see contact data or pay.** The client share shows an alias + scores only and rejects templates that contain rates.
 - **Anti-SSRF.** The scorer only downloads videos from your own Supabase storage.
+
+## How to adapt it
+
+- **Your company and role:** `TALENT_COMPANY`, `ROLE_TITLE`, `PAY_LINE`, `CAMPAIGN_BLURB`, bot name, WhatsApp display/link: all in `.env`. Several openings: `jobs.json`.
+- **Your bar:** `TALENT_PASS_COMPOSITE`, `TALENT_PASS_ENGLISH`, `TALENT_PASS_SPEAKING`. Calibrate on 10+ known candidates first ([how](docs/speaking-score.md#calibrate-before-you-move-the-bar)).
+- **Your test:** edit [`assessment/prequal-test.json`](assessment/) (questions, typing sample, weights).
+- **Your roleplay:** copy `ramon/scenarios/water_treatment.json` to `<your_trade>.json` and change the persona, the 5 rounds and the regex rubric.
+- **Another ATS** (not Zoho Recruit): the ATS calls are grouped in `talent.py` (`recruit_*` functions). Replace them; the gate and the WhatsApp flow don't change.
+- **No public talent page:** leave the Supabase public buckets unset; the pipeline still works without it.
+
+## Related
+- Train the people you hire: [`../training/`](../training/)
+- The data the pipeline writes: [`../crm/talent-data-schema.md`](../crm/talent-data-schema.md)
