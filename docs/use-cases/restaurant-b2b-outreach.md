@@ -18,4 +18,4 @@ Cold pitches to restaurant owners go nowhere: the number is wrong, the place clo
 Validation reply rate · owner reached rate · meetings booked per 100 businesses researched.
 
 ## Watch
-[Restaurant Cold Outreach Step 2: The Validation Text Before the Pitch](https://www.youtube.com/watch?v=zM1wSfTXnMg) · [AI Menu Mockups: Restaurant Cold Outreach That Gets Owners to Reply](https://www.youtube.com/watch?v=BmprQ2kgkHk) · [Zoho CRM Lead Fields That Power a 24-Step Nurture Automation](https://www.youtube.com/watch?v=OEOLl2DHYuY)
+[Restaurant Cold Outreach Step 2: The Validation Text Before the Pitch](https://www.youtube.com/watch?v=zM1wSfTXnMg) · [AI Menu Mockups: Restaurant Cold Outreach That Gets Owners to Reply](https://www.youtube.com/watch?v=xOINVfeYsZI) · [Zoho CRM Lead Fields That Power a 24-Step Nurture Automation](https://www.youtube.com/watch?v=lL8NMTpvowU)

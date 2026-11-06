@@ -30,7 +30,7 @@ The **[list pipeline](../data-pipeline/)** is in this repo: clean, dedupe, enric
 
 ## Chapter 3. Journeys: 24 steps, then 96
 
-Most leads don't buy on the first visit. So we wrote a **24-step nurture** per trade, bilingual, for homeowners and renters: education first, then money, then a final push. Our setters fill the lead fields that make it work ([video: lead fields that power a 24-step nurture](https://www.youtube.com/watch?v=OEOLl2DHYuY)).
+Most leads don't buy on the first visit. So we wrote a **24-step nurture** per trade, bilingual, for homeowners and renters: education first, then money, then a final push. Our setters fill the lead fields that make it work ([video: lead fields that power a 24-step nurture](https://www.youtube.com/watch?v=lL8NMTpvowU)).
 
 Then we noticed the same homeowner who doesn't need a water system this month will need a roof after a storm, windows before winter, or AC before summer. Four 24-step journeys chained by season became the **[96-Step Year-Round Prospect Journey](../playbooks/96-step-journey/)**: 4 phases × 3 chapters × 8 steps, with merge fields, a 6-step negotiation series before it, and exit rules. Video: [The 96-Step CRM Journey That Sells All Year](https://www.youtube.com/watch?v=fA0oPEkFEo4).
 
